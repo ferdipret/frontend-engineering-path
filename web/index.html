@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FE Path</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="layout">
+  <nav id="nav" aria-label="Modules"></nav>
+  <main id="main"></main>
+</div>
+
+<dialog id="search" aria-label="Search">
+  <div class="search-box">
+    <input id="search-input" type="search" placeholder="Search skills, guides, tests, and links…" autocomplete="off" spellcheck="false"
+      role="combobox" aria-expanded="true" aria-controls="search-results" aria-autocomplete="list">
+    <kbd>Esc</kbd>
+  </div>
+  <div id="search-chips" class="search-chips"></div>
+  <div id="search-results" class="search-results" role="listbox" aria-label="Results"></div>
+  <div class="search-foot">
+    <span><kbd>↑</kbd><kbd>↓</kbd> move</span>
+    <span><kbd>Enter</kbd> open</span>
+    <span>Filters: <code>is:todo</code> <code>is:done</code> <code>type:quiz</code> <code>in:css</code> <code>"exact phrase"</code></span>
+  </div>
+</dialog>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>
