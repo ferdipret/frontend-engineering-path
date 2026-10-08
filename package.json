@@ -1,0 +1,14 @@
+{
+  "name": "fe-path",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A complete frontend engineer path, with a local tracker.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "validate": "node scripts/validate.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}
