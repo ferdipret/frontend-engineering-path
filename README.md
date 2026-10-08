@@ -23,18 +23,22 @@ Every module has three files with the same name:
 
 ## Tracker
 
-Requires Node 22.13 or newer. No dependencies to install.
+A server-rendered React Router app on Vite and TypeScript. Requires Node 22.22 or newer.
 
 ```bash
-npm start
+npm install
 ```
 
-Then open http://localhost:4321.
+```bash
+npm run dev
+```
+
+Then open http://localhost:5173. For a production build, `npm run build` then `npm start`.
 
 - **Skills**: click a skill to open its guide; tick the box when you've got it.
 - **Toolkit** and **Practice test** are tabs on each module. Finishing a test's multiple-choice questions saves the score, and the dashboard shows your best per module.
 - **Search**: press `Ctrl K` or `/`. It searches skills, guide text, toolkits, test questions, and resource links, tolerates typos, and understands shorthand like `a11y` or `perf`. Filters: `is:todo`, `is:done`, `type:skill|module|toolkit|quiz|link`, `in:<module>`, and `"exact phrase"`.
-- The web view reads the markdown on every page load, so edits show up on refresh.
+- The web view re-reads the markdown whenever a content file changes, so edits show up on refresh.
 - Progress and test results are stored in SQLite at `data/progress.db` (git-ignored). The checkboxes in the markdown stay unchecked.
 
 ## Editing the content
@@ -42,7 +46,7 @@ Then open http://localhost:4321.
 [AUTHORING.md](AUTHORING.md) describes the three file formats. After editing, check that everything lines up and that links resolve:
 
 ```bash
-node scripts/validate.js 03-css --links
+node scripts/validate.ts 03-css --links
 ```
 
 A checklist module looks like this:
