@@ -1,14 +1,33 @@
 {
   "name": "fe-path",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "A complete frontend engineer path, with a local tracker.",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "validate": "node scripts/validate.js"
+    "dev": "react-router dev",
+    "build": "react-router build",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc",
+    "validate": "node scripts/validate.ts"
   },
   "engines": {
-    "node": ">=22.13"
+    "node": ">=22.22"
+  },
+  "dependencies": {
+    "@react-router/node": "^8.4.0",
+    "@react-router/serve": "^8.4.0",
+    "isbot": "^5.2.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router": "^8.4.0"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^8.4.0",
+    "@types/node": "^24.19.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.3"
   }
 }
