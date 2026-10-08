@@ -261,3 +261,167 @@ dialog#search::backdrop { background: rgb(0 0 0 / 0.4); }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* Theme picker */
+.theme-pick { margin: 18px 8px 0; display: grid; gap: 4px; font-size: 12px; color: var(--nav-muted); }
+.theme-pick select {
+  font: inherit; font-size: 13px; color: var(--nav-text); background: var(--nav-hover);
+  border: 1px solid var(--nav-border); border-radius: var(--radius-s); padding: 5px 8px;
+}
+
+/* ---------- Themes ---------- */
+
+/* Paper: warm, serif, ink and rust. A field notebook. */
+:root[data-theme="paper"] {
+  color-scheme: light;
+  --bg: #f3eee4;
+  --surface: #faf6ee;
+  --border: #d9cfbc;
+  --text: #2a241d;
+  --muted: #7b6f5f;
+  --accent: #9a3b1c;
+  --accent-soft: #efdccb;
+  --track: #e5dccb;
+  --code-bg: #ece4d3;
+  --good: #3f6b3a;
+  --good-soft: #dfe8d2;
+  --bad: #9a3b1c;
+  --bad-soft: #efd6ca;
+  --mark: #f1dc8a;
+  --font: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-head: "Fraunces", Georgia, serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --radius-s: 3px; --radius: 4px; --radius-l: 6px;
+  --nav-bg: #ece5d6;
+  --nav-border: #d9cfbc;
+}
+:root[data-theme="paper"] body { font-size: 16px; }
+:root[data-theme="paper"] h1 { font-weight: 600; font-size: 34px; letter-spacing: -0.01em; }
+:root[data-theme="paper"] h2 { font-weight: 600; font-size: 20px; font-style: italic; }
+:root[data-theme="paper"] .brand { font-family: var(--font-head); font-size: 20px; font-style: italic; }
+:root[data-theme="paper"] .stage-card, :root[data-theme="paper"] .question { border-style: dashed; }
+:root[data-theme="paper"] .eyebrow, :root[data-theme="paper"] .stage-label, :root[data-theme="paper"] .num { font-family: var(--mono); font-size: 11px; }
+:root[data-theme="paper"] .bar { height: 4px; }
+:root[data-theme="paper"] .item.done .what { text-decoration-color: var(--accent); }
+
+/* Terminal: dark phosphor, monospace, square. */
+:root[data-theme="terminal"] {
+  color-scheme: dark;
+  --bg: #0a0d0b;
+  --surface: #0f1411;
+  --border: #223126;
+  --text: #cfe3cc;
+  --muted: #6f8a70;
+  --accent: #7dff8d;
+  --accent-soft: #143120;
+  --track: #1b261d;
+  --code-bg: #121a14;
+  --good: #7dff8d;
+  --good-soft: #143120;
+  --bad: #ff7b6b;
+  --bad-soft: #3a1d19;
+  --mark: #4d4a12;
+  --font: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --font-head: var(--font);
+  --mono: var(--font);
+  --radius-s: 0; --radius: 0; --radius-l: 0;
+  --nav-bg: #070908;
+  --nav-border: #223126;
+}
+:root[data-theme="terminal"] body { font-size: 14px; }
+:root[data-theme="terminal"] h1 { font-size: 24px; font-weight: 700; }
+:root[data-theme="terminal"] h1::before { content: "# "; color: var(--accent); }
+:root[data-theme="terminal"] h2::before { content: "## "; color: var(--muted); }
+:root[data-theme="terminal"] .brand::before { content: "~/"; color: var(--muted); }
+:root[data-theme="terminal"] .stage-label::before { content: "// "; }
+:root[data-theme="terminal"] .bar { height: 8px; }
+:root[data-theme="terminal"] .bar > span { background-image: repeating-linear-gradient(90deg, transparent 0 6px, var(--bg) 6px 8px); }
+:root[data-theme="terminal"] .tabs a[aria-current="page"] { border-bottom-width: 3px; }
+:root[data-theme="terminal"] .mod-link[aria-current="page"] { box-shadow: inset 3px 0 0 var(--accent); }
+:root[data-theme="terminal"] .md a { color: var(--accent); }
+:root[data-theme="terminal"] .md pre { border-left: 3px solid var(--accent); }
+:root[data-theme="terminal"] .result[aria-selected="true"] { box-shadow: inset 3px 0 0 var(--accent); }
+
+/* Studio: light, crisp, big type, dark sidebar, indigo. */
+:root[data-theme="studio"] {
+  color-scheme: light;
+  --bg: #f6f6f8;
+  --surface: #ffffff;
+  --border: #e4e4ea;
+  --text: #121217;
+  --muted: #6b6b78;
+  --accent: #4f46e5;
+  --accent-soft: #e6e4fb;
+  --track: #e9e9ef;
+  --code-bg: #f1f1f5;
+  --good: #1f8a5b;
+  --good-soft: #d9f3e5;
+  --bad: #d13b3b;
+  --bad-soft: #fbe1e1;
+  --mark: #fde68a;
+  --font: "Inter", system-ui, sans-serif;
+  --font-head: "Inter", system-ui, sans-serif;
+  --radius-s: 8px; --radius: 12px; --radius-l: 16px;
+  --nav-bg: #121217;
+  --nav-text: #f2f2f6;
+  --nav-muted: #8e8ea0;
+  --nav-hover: #1f1f27;
+  --nav-active: #2b2a5e;
+  --nav-border: #121217;
+  --shadow: 0 1px 2px rgb(18 18 23 / 0.04), 0 8px 24px rgb(18 18 23 / 0.05);
+}
+:root[data-theme="studio"] h1 { font-size: 36px; font-weight: 800; letter-spacing: -0.03em; }
+:root[data-theme="studio"] h2 { font-weight: 700; letter-spacing: -0.01em; }
+:root[data-theme="studio"] .brand, :root[data-theme="studio"] .mod-link[aria-current="page"] { color: #fff; }
+:root[data-theme="studio"] nav .bar { background: #26262f; }
+:root[data-theme="studio"] nav .bar > span { background: #a5b4fc; }
+:root[data-theme="studio"] .mod-link.complete .count { color: #a5b4fc; }
+:root[data-theme="studio"] .search-open { background: #1f1f27; border-color: #2c2c36; color: #8e8ea0; }
+:root[data-theme="studio"] .search-open kbd { background: #121217; border-color: #2c2c36; }
+:root[data-theme="studio"] .tabs { border: 0; gap: 6px; background: var(--track); padding: 4px; border-radius: 999px; width: max-content; }
+:root[data-theme="studio"] .tabs a { border: 0; margin: 0; border-radius: 999px; padding: 7px 16px; }
+:root[data-theme="studio"] .tabs a[aria-current="page"] { background: var(--surface); box-shadow: var(--shadow); }
+:root[data-theme="studio"] .item:hover, :root[data-theme="studio"] .item.open { box-shadow: var(--shadow); }
+:root[data-theme="studio"] .next-up { background: var(--accent); color: #fff; }
+:root[data-theme="studio"] .next-up small { color: #c7d2fe; }
+:root[data-theme="studio"] .bar { height: 8px; }
+
+/* Blueprint: deep navy on a drafting grid, cyan, grotesk. */
+:root[data-theme="blueprint"] {
+  color-scheme: dark;
+  --bg: #0e1a2b;
+  --surface: #142540;
+  --border: #25406a;
+  --text: #dde8f6;
+  --muted: #8aa3c4;
+  --accent: #4fd3ff;
+  --accent-soft: #163d5c;
+  --track: #1b2f4d;
+  --code-bg: #0f1f36;
+  --good: #5ee0a0;
+  --good-soft: #15402f;
+  --bad: #ff8a7a;
+  --bad-soft: #4a2320;
+  --mark: #5a4f1a;
+  --font: "Space Grotesk", system-ui, sans-serif;
+  --font-head: "Space Grotesk", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --radius-s: 2px; --radius: 3px; --radius-l: 4px;
+  --nav-bg: #0b1524;
+  --nav-border: #25406a;
+}
+:root[data-theme="blueprint"] body {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+:root[data-theme="blueprint"] h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; }
+:root[data-theme="blueprint"] h1::after { content: ""; display: block; width: 48px; height: 3px; background: var(--accent); margin-top: 10px; }
+:root[data-theme="blueprint"] h2 { text-transform: uppercase; letter-spacing: 0.08em; font-size: 13px; color: var(--accent); }
+:root[data-theme="blueprint"] .stage-card h2 { font-size: 16px; text-transform: none; letter-spacing: 0; color: var(--text); }
+:root[data-theme="blueprint"] .brand { letter-spacing: 0.12em; text-transform: uppercase; font-size: 14px; }
+:root[data-theme="blueprint"] .stage-card, :root[data-theme="blueprint"] .question { box-shadow: inset 0 0 0 1px rgb(79 211 255 / 0.08); }
+:root[data-theme="blueprint"] .mod-link[aria-current="page"] { box-shadow: inset 2px 0 0 var(--accent); }
+:root[data-theme="blueprint"] .bar { height: 5px; }
+:root[data-theme="blueprint"] .md a { color: var(--accent); }

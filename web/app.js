@@ -10,6 +10,8 @@ const attempts = new Map();
 
 const $nav = document.getElementById('nav');
 const $main = document.getElementById('main');
+const THEMES = { '': 'Default (follows system)', paper: 'Paper', terminal: 'Terminal', studio: 'Studio', blueprint: 'Blueprint' };
+const currentTheme = () => document.documentElement.dataset.theme || '';
 
 const slugify = (s) => s.toLowerCase().replace(/[`*_]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const itemsOf = (mod) => mod.sections.flatMap((s) => s.blocks.filter((b) => b.type === 'item'));
@@ -60,7 +62,8 @@ function renderNav() {
     <div class="overall">${all.n} of ${all.total} skills · ${all.pct}%${bar(all.pct)}</div>
     ${stages().map((st) => `
       <div class="stage-label">${esc(st.name)}</div>
-      ${st.modules.map((m) => modLink(m, current)).join('')}`).join('')}`;
+      ${st.modules.map((m) => modLink(m, current)).join('')}`).join('')}
+    <label class="theme-pick">Theme<select id="theme">${Object.entries(THEMES).map(([k, v]) => `<option value="${k}"${k === currentTheme() ? ' selected' : ''}>${v}</option>`).join('')}</select></label>`;
 }
 
 function renderDashboard() {
@@ -432,6 +435,13 @@ $search.addEventListener('click', (e) => {
   if (example) { $input.value = example.dataset.example; selected = 0; renderResults(); $input.focus(); }
   else if (chip) { typeFilter = chip.dataset.type; selected = 0; renderResults(); $input.focus(); }
   else if (result) openResult(shown[Number(result.dataset.i)]);
+});
+$nav.addEventListener('change', (e) => {
+  if (e.target.id !== 'theme') return;
+  const theme = e.target.value;
+  if (theme) document.documentElement.dataset.theme = theme;
+  else delete document.documentElement.dataset.theme;
+  try { theme ? localStorage.setItem('fe-path-theme', theme) : localStorage.removeItem('fe-path-theme'); } catch {}
 });
 $nav.addEventListener('click', (e) => {
   if (e.target.closest('[data-action="search"]')) openSearch();
