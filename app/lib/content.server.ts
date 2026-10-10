@@ -1,5 +1,5 @@
 // Parsers for the three kinds of markdown content. See AUTHORING.md for the formats.
-import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 export const ROOT = process.cwd();
@@ -166,7 +166,27 @@ export const moduleFiles = () =>
 export const itemsOf = (mod: Module): Item[] =>
   mod.sections.flatMap((s) => s.blocks.filter((b): b is Item => b.type === "item"));
 
+// Parsing every file takes tens of milliseconds, so the result is kept until any content file changes.
+let cache: { signature: string; modules: Module[] } | null = null;
+
+function signature(): string {
+  const parts: string[] = [];
+  for (const dir of [PATH_DIR, GUIDE_DIR, QUIZ_DIR]) {
+    if (!existsSync(dir)) continue;
+    for (const f of readdirSync(dir)) parts.push(f, String(statSync(join(dir, f)).mtimeMs));
+  }
+  return parts.join("|");
+}
+
 export function loadModules(): Module[] {
+  const sig = signature();
+  if (cache && cache.signature === sig) return cache.modules;
+  const modules = parseAll();
+  cache = { signature: sig, modules };
+  return modules;
+}
+
+function parseAll(): Module[] {
   return moduleFiles().map((file) => {
     const mod = parseModule(file);
     const guide = parseGuide(mod.slug);
