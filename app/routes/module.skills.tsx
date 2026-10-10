@@ -4,7 +4,8 @@ import type { Route } from "./+types/module.skills";
 import { itemsOf, loadModule } from "~/lib/content.server.ts";
 import { getProgress, setProgress } from "~/lib/db.server.ts";
 import { inline, render } from "~/lib/markdown.ts";
-import { splitItem } from "~/lib/stats.ts";
+import { slugify, splitItem } from "~/lib/stats.ts";
+import type { TocHandle } from "~/components/Toc.tsx";
 
 type SkillRow = { kind: "item"; id: string; key: string; whatHtml: string; whyHtml: string; guideHtml: string; done: boolean };
 type Row = SkillRow | { kind: "bullet"; html: string } | { kind: "text"; html: string };
@@ -32,6 +33,14 @@ export function loader({ params }: Route.LoaderArgs) {
   return { sections, hasGuides: itemsOf(mod).some((i) => i.guide) };
 }
 
+export const handle: TocHandle = {
+  toc: (data) => ({
+    entries: (data as Awaited<ReturnType<typeof loader>>).sections
+      .filter((s) => s.title)
+      .map((s) => ({ id: `s-${slugify(s.title)}`, label: s.title.replace(/`/g, "") })),
+  }),
+};
+
 export async function action({ request, params }: Route.ActionArgs) {
   const form = await request.formData();
   const id = String(form.get("id"));
@@ -50,13 +59,11 @@ export default function Skills({ loaderData }: Route.ComponentProps) {
   // A hash like #the-cascade (from search or a shared link) opens that skill and scrolls to it.
   useEffect(() => {
     const key = location.hash.slice(1);
-    if (!key) return;
+    const el = key && document.getElementById(`item-${key}`);
+    if (!el) return;
     setOpen((prev) => new Set(prev).add(key));
-    const el = document.getElementById(`item-${key}`);
-    if (el) {
-      el.scrollIntoView({ block: "start" });
-      el.classList.add("flash");
-    }
+    el.scrollIntoView({ block: "start" });
+    el.classList.add("flash");
   }, [location.hash]);
 
   const toggle = (key: string) =>
@@ -82,7 +89,7 @@ export default function Skills({ loaderData }: Route.ComponentProps) {
       )}
       {sections.map((section, i) => (
         <section className="md" key={i}>
-          {section.title && <h2 dangerouslySetInnerHTML={{ __html: inline(section.title) }} />}
+          {section.title && <h2 id={`s-${slugify(section.title)}`} dangerouslySetInnerHTML={{ __html: inline(section.title) }} />}
           <Rows rows={section.rows} open={open} onToggle={toggle} />
         </section>
       ))}

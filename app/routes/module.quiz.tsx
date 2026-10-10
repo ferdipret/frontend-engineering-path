@@ -5,6 +5,7 @@ import { loadModule } from "~/lib/content.server.ts";
 import { addQuizResult, getQuizResults } from "~/lib/db.server.ts";
 import { inline, render } from "~/lib/markdown.ts";
 import { pct } from "~/lib/stats.ts";
+import type { TocHandle } from "~/components/Toc.tsx";
 
 export function loader({ params }: Route.LoaderArgs) {
   const mod = loadModule(params.slug);
@@ -30,6 +31,13 @@ export async function action({ request, params }: Route.ActionArgs) {
   addQuizResult(mod.slug, score, total);
   return { saved: true };
 }
+
+export const handle: TocHandle = {
+  toc: (data) => ({
+    compact: true,
+    entries: (data as Awaited<ReturnType<typeof loader>>).questions.map((_, i) => ({ id: `q-${i + 1}`, label: `${i + 1}` })),
+  }),
+};
 
 export default function Quiz({ loaderData }: Route.ComponentProps) {
   const { questions, history } = loaderData;

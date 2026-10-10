@@ -11,17 +11,17 @@ export default function Dashboard() {
   const next = modules.find((m) => m.done < m.total);
   return (
     <>
-      <h1>Frontend Engineer Path</h1>
-      <p className="summary">
-        From how the web works to leading frontend architecture. Open a skill to read its guide, check it off when you can do it
-        without looking anything up, and take each module's practice test.
-      </p>
-      <div className="head-progress">
+      <section className="hero">
+        <h1>Frontend Engineer Path</h1>
+        <p>
+          From how the web works to leading frontend architecture. Open a skill to read its guide, check it off when you can do it
+          without looking anything up, and take each module's practice test.
+        </p>
         <ProgressBar value={all.pct} />
-        <span>
-          {all.done}/{all.total} · {all.pct}%
-        </span>
-      </div>
+        <p style={{ marginTop: 8, fontSize: 12 }}>
+          {all.done} of {all.total} skills · {all.pct}%
+        </p>
+      </section>
       {next && (
         <Link className="next-up" to={`/${next.slug}`}>
           <small>{all.done ? "Continue" : "Start here"}</small>

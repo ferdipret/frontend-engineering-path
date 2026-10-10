@@ -4,6 +4,7 @@ import type { Route } from "./+types/module.toolkit";
 import { loadModule } from "~/lib/content.server.ts";
 import { inline, render } from "~/lib/markdown.ts";
 import { slugify } from "~/lib/stats.ts";
+import type { TocHandle } from "~/components/Toc.tsx";
 
 export function loader({ params }: Route.LoaderArgs) {
   const mod = loadModule(params.slug);
@@ -12,6 +13,12 @@ export function loader({ params }: Route.LoaderArgs) {
     sections: mod.toolkit.map((t) => ({ id: slugify(t.title), titleHtml: inline(t.title), html: render(t.md) })),
   };
 }
+
+export const handle: TocHandle = {
+  toc: (data) => ({
+    entries: (data as Awaited<ReturnType<typeof loader>>).sections.map((s) => ({ id: s.id, label: s.titleHtml.replace(/<[^>]+>/g, "") })),
+  }),
+};
 
 export default function Toolkit({ loaderData }: Route.ComponentProps) {
   const location = useLocation();

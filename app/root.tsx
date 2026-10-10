@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration, useRouteLoaderData } from "react-router";
 import type { Route } from "./+types/root";
+import { Header } from "./components/Header.tsx";
 import { Sidebar } from "./components/Sidebar.tsx";
+import { OnThisPage } from "./components/Toc.tsx";
 import { SearchPalette } from "./components/SearchPalette.tsx";
 import { itemsOf, loadModules } from "./lib/content.server.ts";
 import { getProgress, getQuizResults } from "./lib/db.server.ts";
@@ -74,13 +76,17 @@ export default function App({ loaderData }: Route.ComponentProps) {
   }, []);
 
   return (
-    <div className="layout">
-      <Sidebar modules={loaderData.modules} theme={loaderData.theme} onSearch={() => setSearchOpen(true)} />
-      <main id="main">
-        <Outlet />
-      </main>
+    <>
+      <Header theme={loaderData.theme} onSearch={() => setSearchOpen(true)} />
+      <div className="layout">
+        <Sidebar modules={loaderData.modules} />
+        <main id="main">
+          <Outlet />
+        </main>
+        <OnThisPage />
+      </div>
       <SearchPalette open={searchOpen} onClose={() => setSearchOpen(false)} doneIds={loaderData.doneIds} />
-    </div>
+    </>
   );
 }
 
