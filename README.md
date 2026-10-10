@@ -59,8 +59,8 @@ A checklist module looks like this:
 
 ## Section
 
-- [ ] Skill name — what being able to do it means
+- [ ] Skill name - what being able to do it means
 - Plain bullets and [links](https://example.com) are shown as-is
 ```
 
-A skill's identity is its file name plus the text before the ` — `. Rewording the explanation keeps its checked state; renaming the skill or the file resets it, and its guide entry heading has to be renamed to match.
+A skill's identity is its file name plus the text before the ` - `. Rewording the explanation keeps its checked state; renaming the skill or the file resets it, and its guide entry heading has to be renamed to match.

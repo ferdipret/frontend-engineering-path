@@ -31,8 +31,8 @@ export const slugify = (s: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
-// The part of a checklist item before " — " is the skill's name and identity.
-export const skillName = (text: string) => text.split(" — ")[0] ?? text;
+// The part of a checklist item before " - " is the skill's name and identity.
+export const skillName = (text: string) => text.split(" - ")[0] ?? text;
 
 // Repeated names within one file get -2, -3… so ids stay unique.
 function uniquer() {

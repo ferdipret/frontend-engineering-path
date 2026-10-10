@@ -55,16 +55,16 @@ Keep `<StrictMode>` on in development. It double-invokes render functions and ru
 
 ### Official references
 
-- [react.dev: Learn React](https://react.dev/learn) — the official course; the "Adding Interactivity", "Managing State", and "Escape Hatches" chapters are the core of this module.
-- [react.dev: API reference](https://react.dev/reference/react) — every hook, component, and API with caveats and troubleshooting sections.
-- [react.dev: Rules of React](https://react.dev/reference/rules) — the purity and hook rules that the compiler and linter assume.
-- [react.dev: React Compiler](https://react.dev/learn/react-compiler/introduction) — what the compiler does, installation, and incremental adoption.
-- [react.dev: eslint-plugin-react-hooks](https://react.dev/reference/eslint-plugin-react-hooks) — every lint rule and what it catches.
-- [react.dev: React Developer Tools](https://react.dev/learn/react-developer-tools) — installing and using the extension.
-- [react.dev: Blog](https://react.dev/blog) — release posts; read the React 19, 19.2, and 19.3 posts to know what is current.
-- [Testing Library: React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) — the standard component testing approach.
-- [WAI-ARIA Authoring Practices Guide: Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) — the keyboard and ARIA contract for every common widget you will build.
-- [Vue](https://vuejs.org/guide/introduction.html), [Svelte](https://svelte.dev/docs/svelte/overview), [Solid](https://docs.solidjs.com/), and [Angular](https://angular.dev/overview) docs — for the "Beyond React" section.
+- [react.dev: Learn React](https://react.dev/learn) - the official course; the "Adding Interactivity", "Managing State", and "Escape Hatches" chapters are the core of this module.
+- [react.dev: API reference](https://react.dev/reference/react) - every hook, component, and API with caveats and troubleshooting sections.
+- [react.dev: Rules of React](https://react.dev/reference/rules) - the purity and hook rules that the compiler and linter assume.
+- [react.dev: React Compiler](https://react.dev/learn/react-compiler/introduction) - what the compiler does, installation, and incremental adoption.
+- [react.dev: eslint-plugin-react-hooks](https://react.dev/reference/eslint-plugin-react-hooks) - every lint rule and what it catches.
+- [react.dev: React Developer Tools](https://react.dev/learn/react-developer-tools) - installing and using the extension.
+- [react.dev: Blog](https://react.dev/blog) - release posts; read the React 19, 19.2, and 19.3 posts to know what is current.
+- [Testing Library: React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) - the standard component testing approach.
+- [WAI-ARIA Authoring Practices Guide: Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) - the keyboard and ARIA contract for every common widget you will build.
+- [Vue](https://vuejs.org/guide/introduction.html), [Svelte](https://svelte.dev/docs/svelte/overview), [Solid](https://docs.solidjs.com/), and [Angular](https://angular.dev/overview) docs - for the "Beyond React" section.
 
 ## Skills
 

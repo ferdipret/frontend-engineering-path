@@ -28,7 +28,7 @@ A generic frontend engineer curriculum, from fundamentals to mastery, with a loc
 
 ## Rules of thumb
 
-- A skill's identity is its file name plus the text before ` — `. Renaming a skill resets progress and breaks its guide link; reword descriptions freely, rename names deliberately and update the guide heading to match.
+- A skill's identity is its file name plus the text before ` - `. Renaming a skill resets progress and breaks its guide link; reword descriptions freely, rename names deliberately and update the guide heading to match.
 - Prefer official docs and primary sources for links. Never invent a URL.
 - After editing content run `node scripts/validate.ts <slug> --links` and get to 0 errors.
 - The tracker is a React Router framework-mode app (server-rendered) on Vite and TypeScript. Run `npm run typecheck` before committing app code; it regenerates the route types first.

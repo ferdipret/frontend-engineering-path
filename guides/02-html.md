@@ -55,15 +55,15 @@ Automated checkers find perhaps a third of accessibility problems. They can tell
 
 ### Official references
 
-- [HTML Living Standard (developer edition)](https://html.spec.whatwg.org/dev/) — the authoritative definition of every element, attribute, and content model, without the implementer-only detail.
-- [MDN: HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements) — one page per element with attributes, examples, accessibility notes, and browser support.
-- [MDN: Global attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes) — attributes valid on every element.
-- [web.dev: Learn HTML](https://web.dev/learn/html) — a structured course on the whole language.
-- [web.dev: Learn Forms](https://web.dev/learn/forms) — a course on form markup, validation, and autofill.
-- [Nu Html Checker](https://validator.w3.org/nu/) — the W3C validator for the living standard.
-- [W3C: ARIA in HTML](https://www.w3.org/TR/html-aria/) — each element's implicit role and which ARIA attributes are allowed on it.
-- [W3C WAI: Web accessibility tutorials](https://www.w3.org/WAI/tutorials/) — worked guidance for page structure, images, tables, and forms.
-- [ARIA Authoring Practices Guide: Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) — expected keyboard behaviour for widgets such as dialogs, disclosures, and menus.
+- [HTML Living Standard (developer edition)](https://html.spec.whatwg.org/dev/) - the authoritative definition of every element, attribute, and content model, without the implementer-only detail.
+- [MDN: HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements) - one page per element with attributes, examples, accessibility notes, and browser support.
+- [MDN: Global attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes) - attributes valid on every element.
+- [web.dev: Learn HTML](https://web.dev/learn/html) - a structured course on the whole language.
+- [web.dev: Learn Forms](https://web.dev/learn/forms) - a course on form markup, validation, and autofill.
+- [Nu Html Checker](https://validator.w3.org/nu/) - the W3C validator for the living standard.
+- [W3C: ARIA in HTML](https://www.w3.org/TR/html-aria/) - each element's implicit role and which ARIA attributes are allowed on it.
+- [W3C WAI: Web accessibility tutorials](https://www.w3.org/WAI/tutorials/) - worked guidance for page structure, images, tables, and forms.
+- [ARIA Authoring Practices Guide: Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) - expected keyboard behaviour for widgets such as dialogs, disclosures, and menus.
 
 ## Skills
 

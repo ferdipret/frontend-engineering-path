@@ -19,7 +19,7 @@ You need a fast way to run small pieces of code and a real debugger. Learn both 
 For language-level code, "done" means that a test proves the behaviour, including the awkward inputs. Node ships a test runner and an assertion library, so you need to install nothing:
 
 ```js
-// sum.test.js — run with: node --test
+// sum.test.js - run with: node --test
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { sum } from './sum.js';
@@ -65,17 +65,17 @@ Run ESLint and, if you use `// @ts-check`, the type checker as part of the same 
 
 ### Official references
 
-- [MDN: JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) — every built-in object, operator, and statement, with compatibility tables.
-- [MDN: JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) — chapter-length explanations of the main topics.
-- [ECMAScript Language Specification](https://tc39.es/ecma262/) — the living standard for the language; the final word on any behaviour.
-- [ECMAScript Internationalization API Specification](https://tc39.es/ecma402/) — the `Intl` object: formatting of dates, numbers, lists, and plurals.
-- [TC39 proposals](https://github.com/tc39/proposals) — every feature in progress and its current stage.
-- [HTML Standard: Event loops](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops) — how browsers schedule tasks, microtasks, and rendering.
-- [Node.js API documentation](https://nodejs.org/api/) — modules, the test runner, and the runtime outside the browser.
-- [V8 blog](https://v8.dev/blog) — how the engine in Chrome and Node implements and optimises features.
-- [javascript.info](https://javascript.info/) — a thorough, free tutorial that follows the language from basics to advanced topics.
-- [ESLint: Rules reference](https://eslint.org/docs/latest/rules/) — what each lint rule catches and why.
-- [Chrome DevTools: Debug JavaScript](https://developer.chrome.com/docs/devtools/javascript) — the official walkthrough of the debugger.
+- [MDN: JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - every built-in object, operator, and statement, with compatibility tables.
+- [MDN: JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) - chapter-length explanations of the main topics.
+- [ECMAScript Language Specification](https://tc39.es/ecma262/) - the living standard for the language; the final word on any behaviour.
+- [ECMAScript Internationalization API Specification](https://tc39.es/ecma402/) - the `Intl` object: formatting of dates, numbers, lists, and plurals.
+- [TC39 proposals](https://github.com/tc39/proposals) - every feature in progress and its current stage.
+- [HTML Standard: Event loops](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops) - how browsers schedule tasks, microtasks, and rendering.
+- [Node.js API documentation](https://nodejs.org/api/) - modules, the test runner, and the runtime outside the browser.
+- [V8 blog](https://v8.dev/blog) - how the engine in Chrome and Node implements and optimises features.
+- [javascript.info](https://javascript.info/) - a thorough, free tutorial that follows the language from basics to advanced topics.
+- [ESLint: Rules reference](https://eslint.org/docs/latest/rules/) - what each lint rule catches and why.
+- [Chrome DevTools: Debug JavaScript](https://developer.chrome.com/docs/devtools/javascript) - the official walkthrough of the debugger.
 
 ## Skills
 

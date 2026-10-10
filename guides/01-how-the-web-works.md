@@ -45,15 +45,15 @@ You are done when you can explain every row in the waterfall for your page and n
 
 ### Official references
 
-- [MDN: HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP) — the practical reference for methods, status codes, headers, caching, and cookies.
-- [RFC 9110: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html) — the normative definition of methods, status codes, and header fields, shared by all HTTP versions.
-- [RFC 9111: HTTP Caching](https://www.rfc-editor.org/rfc/rfc9111.html) — the rules behind `Cache-Control`, freshness, and validation.
-- [WHATWG URL Standard](https://url.spec.whatwg.org/) — how browsers parse and serialise URLs.
-- [WHATWG Fetch Standard](https://fetch.spec.whatwg.org/) — how browsers make requests, including CORS and credentials.
-- [Chrome DevTools: Network features reference](https://developer.chrome.com/docs/devtools/network/reference) — every control and column in the Network panel.
-- [curl man page](https://curl.se/docs/manpage.html) — every flag, with examples.
-- [web.dev: Baseline](https://web.dev/baseline) — how to tell whether a web platform feature is safe to use across browsers.
-- [High Performance Browser Networking](https://hpbn.co/) — Ilya Grigorik's free book on TCP, TLS, and HTTP from a browser's point of view; older, but the fundamentals have not changed.
+- [MDN: HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP) - the practical reference for methods, status codes, headers, caching, and cookies.
+- [RFC 9110: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html) - the normative definition of methods, status codes, and header fields, shared by all HTTP versions.
+- [RFC 9111: HTTP Caching](https://www.rfc-editor.org/rfc/rfc9111.html) - the rules behind `Cache-Control`, freshness, and validation.
+- [WHATWG URL Standard](https://url.spec.whatwg.org/) - how browsers parse and serialise URLs.
+- [WHATWG Fetch Standard](https://fetch.spec.whatwg.org/) - how browsers make requests, including CORS and credentials.
+- [Chrome DevTools: Network features reference](https://developer.chrome.com/docs/devtools/network/reference) - every control and column in the Network panel.
+- [curl man page](https://curl.se/docs/manpage.html) - every flag, with examples.
+- [web.dev: Baseline](https://web.dev/baseline) - how to tell whether a web platform feature is safe to use across browsers.
+- [High Performance Browser Networking](https://hpbn.co/) - Ilya Grigorik's free book on TCP, TLS, and HTTP from a browser's point of view; older, but the fundamentals have not changed.
 
 ## Skills
 

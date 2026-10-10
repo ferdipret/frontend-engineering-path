@@ -47,16 +47,16 @@ In the field, ship the `web-vitals` attribution build and watch the 75th percent
 
 ### Official references
 
-- [web.dev: Learn Performance](https://web.dev/learn/performance) — the structured course covering loading, images, fonts, JavaScript, and workers.
-- [web.dev: Web Vitals](https://web.dev/articles/vitals) — definitions and thresholds for the Core Web Vitals.
-- [Chrome DevTools: Performance panel reference](https://developer.chrome.com/docs/devtools/performance/reference) — every track, setting, and shortcut in the panel.
-- [Chrome for Developers: CrUX documentation](https://developer.chrome.com/docs/crux) — how field data is collected, and the API, BigQuery, and history datasets.
-- [Lighthouse performance scoring](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring) — which metrics make up the score and their weights.
-- [MDN: Performance API](https://developer.mozilla.org/en-US/docs/Web/API/Performance_API) — `PerformanceObserver`, entry types, and User Timing.
-- [GoogleChrome/web-vitals](https://github.com/GoogleChrome/web-vitals) — the library that measures the vitals the way Chrome's tools do.
-- [MDN: HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) — the caching model, freshness, and validation.
-- [RFC 9111: HTTP Caching](https://www.rfc-editor.org/rfc/rfc9111.html) — the normative definition of `Cache-Control` semantics.
-- [High Performance Browser Networking](https://hpbn.co/) — Ilya Grigorik's free book on TCP, TLS, HTTP/2, and mobile networks.
+- [web.dev: Learn Performance](https://web.dev/learn/performance) - the structured course covering loading, images, fonts, JavaScript, and workers.
+- [web.dev: Web Vitals](https://web.dev/articles/vitals) - definitions and thresholds for the Core Web Vitals.
+- [Chrome DevTools: Performance panel reference](https://developer.chrome.com/docs/devtools/performance/reference) - every track, setting, and shortcut in the panel.
+- [Chrome for Developers: CrUX documentation](https://developer.chrome.com/docs/crux) - how field data is collected, and the API, BigQuery, and history datasets.
+- [Lighthouse performance scoring](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring) - which metrics make up the score and their weights.
+- [MDN: Performance API](https://developer.mozilla.org/en-US/docs/Web/API/Performance_API) - `PerformanceObserver`, entry types, and User Timing.
+- [GoogleChrome/web-vitals](https://github.com/GoogleChrome/web-vitals) - the library that measures the vitals the way Chrome's tools do.
+- [MDN: HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) - the caching model, freshness, and validation.
+- [RFC 9111: HTTP Caching](https://www.rfc-editor.org/rfc/rfc9111.html) - the normative definition of `Cache-Control` semantics.
+- [High Performance Browser Networking](https://hpbn.co/) - Ilya Grigorik's free book on TCP, TLS, HTTP/2, and mobile networks.
 
 ## Skills
 

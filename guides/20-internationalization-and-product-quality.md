@@ -50,18 +50,18 @@
 
 ### Official references
 
-- [MDN: Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) — the built-in formatting, plural, collation, and segmentation APIs.
-- [W3C Internationalization: techniques index](https://www.w3.org/International/techniques/authoring-html) — authoritative guidance on language tags, direction, and text handling in HTML and CSS.
-- [Unicode CLDR](https://cldr.unicode.org/) — the locale data behind `Intl`: plural rules, date patterns, currency formats.
-- [ICU user guide: Formatting messages](https://unicode-org.github.io/icu/userguide/format_parse/messages/) — the MessageFormat syntax reference.
-- [FormatJS documentation](https://formatjs.github.io/docs/getting-started/installation) — react-intl, the extraction CLI, and `Intl` polyfills.
-- [MDN: Temporal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) — the modern date and time API, with time zone aware types.
-- [Google Search Central: Localized versions of your pages](https://developers.google.com/search/docs/specialty/international/localized-versions) — the `hreflang` rules search engines apply.
-- [OpenFeature documentation](https://openfeature.dev/docs/reference/intro) — the vendor-neutral feature flag API standard.
-- [Sentry JavaScript documentation](https://docs.sentry.io/platforms/javascript/) — SDK setup, source maps, and enrichment.
-- [web.dev: Baseline](https://web.dev/baseline) — the shared definition of which web features are safe to use.
-- [React: Error boundaries](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) — the official reference for containing render errors.
-- [Resilient Web Design](https://resilientwebdesign.com/) — Jeremy Keith's short free book on building in layers.
+- [MDN: Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) - the built-in formatting, plural, collation, and segmentation APIs.
+- [W3C Internationalization: techniques index](https://www.w3.org/International/techniques/authoring-html) - authoritative guidance on language tags, direction, and text handling in HTML and CSS.
+- [Unicode CLDR](https://cldr.unicode.org/) - the locale data behind `Intl`: plural rules, date patterns, currency formats.
+- [ICU user guide: Formatting messages](https://unicode-org.github.io/icu/userguide/format_parse/messages/) - the MessageFormat syntax reference.
+- [FormatJS documentation](https://formatjs.github.io/docs/getting-started/installation) - react-intl, the extraction CLI, and `Intl` polyfills.
+- [MDN: Temporal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) - the modern date and time API, with time zone aware types.
+- [Google Search Central: Localized versions of your pages](https://developers.google.com/search/docs/specialty/international/localized-versions) - the `hreflang` rules search engines apply.
+- [OpenFeature documentation](https://openfeature.dev/docs/reference/intro) - the vendor-neutral feature flag API standard.
+- [Sentry JavaScript documentation](https://docs.sentry.io/platforms/javascript/) - SDK setup, source maps, and enrichment.
+- [web.dev: Baseline](https://web.dev/baseline) - the shared definition of which web features are safe to use.
+- [React: Error boundaries](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) - the official reference for containing render errors.
+- [Resilient Web Design](https://resilientwebdesign.com/) - Jeremy Keith's short free book on building in layers.
 
 ## Skills
 

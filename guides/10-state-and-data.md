@@ -65,18 +65,18 @@ Manual checks that catch what tests miss: throttle to Slow 4G and click quickly 
 
 ### Official references
 
-- [TanStack Query: Overview](https://tanstack.com/query/latest/docs/framework/react/overview) — the main query library docs; read "Important Defaults" and the Guides section in order.
-- [TkDodo: Practical React Query](https://tkdodo.eu/blog/practical-react-query) — the maintainer's blog series; the best explanation of the mental model.
-- [SWR: Getting Started](https://swr.vercel.app/docs/getting-started) — the lighter alternative from Vercel.
-- [Redux: Style Guide](https://redux.js.org/style-guide/) — the official rules and recommendations for Redux code.
-- [Redux Toolkit: Getting Started](https://redux-toolkit.js.org/introduction/getting-started) — the standard way to write Redux today.
-- [Zustand: Introduction](https://zustand.docs.pmnd.rs/learn/getting-started/introduction) and [Jotai: Documentation](https://jotai.org/docs) — small external store libraries.
-- [Stately: XState docs](https://stately.ai/docs/xstate) — state machines and the actor model.
-- [react.dev: Managing State](https://react.dev/learn/managing-state) — state structure, lifting, reducers, and context.
-- [MSW: Documentation](https://mswjs.io/docs/) — API mocking in the browser and in Node.
-- [MDN: HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP) and [RFC 9110: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html) — methods, status codes, caching, and conditional requests.
-- [GraphQL: Learn](https://graphql.org/learn/) — the query language and type system.
-- [MDN: WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) and [MDN: Server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) — the real-time transports.
+- [TanStack Query: Overview](https://tanstack.com/query/latest/docs/framework/react/overview) - the main query library docs; read "Important Defaults" and the Guides section in order.
+- [TkDodo: Practical React Query](https://tkdodo.eu/blog/practical-react-query) - the maintainer's blog series; the best explanation of the mental model.
+- [SWR: Getting Started](https://swr.vercel.app/docs/getting-started) - the lighter alternative from Vercel.
+- [Redux: Style Guide](https://redux.js.org/style-guide/) - the official rules and recommendations for Redux code.
+- [Redux Toolkit: Getting Started](https://redux-toolkit.js.org/introduction/getting-started) - the standard way to write Redux today.
+- [Zustand: Introduction](https://zustand.docs.pmnd.rs/learn/getting-started/introduction) and [Jotai: Documentation](https://jotai.org/docs) - small external store libraries.
+- [Stately: XState docs](https://stately.ai/docs/xstate) - state machines and the actor model.
+- [react.dev: Managing State](https://react.dev/learn/managing-state) - state structure, lifting, reducers, and context.
+- [MSW: Documentation](https://mswjs.io/docs/) - API mocking in the browser and in Node.
+- [MDN: HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP) and [RFC 9110: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html) - methods, status codes, caching, and conditional requests.
+- [GraphQL: Learn](https://graphql.org/learn/) - the query language and type system.
+- [MDN: WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) and [MDN: Server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) - the real-time transports.
 
 ## Skills
 

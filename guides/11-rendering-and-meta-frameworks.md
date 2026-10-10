@@ -44,16 +44,16 @@ For SEO, use the URL Inspection tool in Google Search Console to see the rendere
 
 ### Official references
 
-- [web.dev: Rendering on the Web](https://web.dev/articles/rendering-on-the-web) — the canonical comparison of CSR, SSR, static rendering, and hydration variants.
-- [React: Server Components reference](https://react.dev/reference/rsc/server-components) — what Server Components, `"use client"`, and Server Functions are, independent of any framework.
-- [React DOM: Server APIs](https://react.dev/reference/react-dom/server) — `renderToPipeableStream`, `renderToReadableStream`, and the prerender APIs that frameworks build on.
-- [Next.js: App Router documentation](https://nextjs.org/docs/app) — routing, rendering, caching, and deployment for the App Router.
-- [React Router: Picking a mode](https://reactrouter.com/start/modes) — declarative, data, and framework modes and what each gives you.
-- [Astro: Islands architecture](https://docs.astro.build/en/concepts/islands/) — client and server islands explained by the framework that popularised them.
-- [Vite: Server-side rendering](https://vite.dev/guide/ssr) — the low-level SSR primitives every Vite-based framework uses.
-- [MDN: History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API) — the browser API underneath every client-side router.
-- [Google Search Central: JavaScript SEO basics](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) — how Googlebot crawls, renders, and indexes JavaScript pages.
-- [Schema.org: Getting started](https://schema.org/docs/gs.html) — the vocabulary used by JSON-LD structured data.
+- [web.dev: Rendering on the Web](https://web.dev/articles/rendering-on-the-web) - the canonical comparison of CSR, SSR, static rendering, and hydration variants.
+- [React: Server Components reference](https://react.dev/reference/rsc/server-components) - what Server Components, `"use client"`, and Server Functions are, independent of any framework.
+- [React DOM: Server APIs](https://react.dev/reference/react-dom/server) - `renderToPipeableStream`, `renderToReadableStream`, and the prerender APIs that frameworks build on.
+- [Next.js: App Router documentation](https://nextjs.org/docs/app) - routing, rendering, caching, and deployment for the App Router.
+- [React Router: Picking a mode](https://reactrouter.com/start/modes) - declarative, data, and framework modes and what each gives you.
+- [Astro: Islands architecture](https://docs.astro.build/en/concepts/islands/) - client and server islands explained by the framework that popularised them.
+- [Vite: Server-side rendering](https://vite.dev/guide/ssr) - the low-level SSR primitives every Vite-based framework uses.
+- [MDN: History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API) - the browser API underneath every client-side router.
+- [Google Search Central: JavaScript SEO basics](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) - how Googlebot crawls, renders, and indexes JavaScript pages.
+- [Schema.org: Getting started](https://schema.org/docs/gs.html) - the vocabulary used by JSON-LD structured data.
 
 ## Skills
 

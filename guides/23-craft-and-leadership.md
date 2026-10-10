@@ -51,20 +51,20 @@ For anything you ship to others (a doc, a proposal, an open-source contribution)
 
 ### Official references
 
-- [Google Engineering Practices: Code review developer guide](https://google.github.io/eng-practices/review/) — the standard for what review is for, how to do it, and how to author reviewable changes.
-- [Refactoring catalog (Martin Fowler)](https://refactoring.com/catalog/) — every named refactoring with its mechanics.
-- [StaffEng guides (Will Larson)](https://staffeng.com/guides/) — what senior technical leadership work consists of.
-- [Software Engineering at Google (free online)](https://abseil.io/resources/swe-book/html/toc.html) — chapters on knowledge sharing, code review, documentation, and large-scale change.
-- [Design Docs at Google](https://www.industrialempathy.com/posts/design-docs-at-google/) — the structure and purpose of a design doc.
-- [DORA capabilities catalog](https://dora.dev/capabilities/) — the delivery practices that research links to team performance.
-- [Shape Up (Basecamp)](https://basecamp.com/shapeup) — appetite, scope hammering, and shipping in slices.
-- [Claude Code: Best practices](https://code.claude.com/docs/en/best-practices) — Anthropic's guidance on context, planning, and verification with a coding agent.
-- [GitHub Docs: About Copilot cloud agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent) — how GitHub's asynchronous agent works and where it is limited.
-- [Claude Code: Security](https://code.claude.com/docs/en/security) — permissions, sandboxing, and prompt injection safeguards for a coding agent.
-- [AI SDK: Tools and tool calling](https://ai-sdk.dev/docs/ai-sdk-core/tools-and-tool-calling) — defining tools with schemas and running multi-step calls.
-- [Claude API docs: Define success criteria and build evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests) — how to design and grade evals for a model-backed feature.
-- [AGENTS.md](https://agents.md/) — the open format for repository instructions that most coding agents read.
-- [Open Source Guides: How to contribute](https://opensource.guide/how-to-contribute/) — the etiquette and mechanics of contributing.
+- [Google Engineering Practices: Code review developer guide](https://google.github.io/eng-practices/review/) - the standard for what review is for, how to do it, and how to author reviewable changes.
+- [Refactoring catalog (Martin Fowler)](https://refactoring.com/catalog/) - every named refactoring with its mechanics.
+- [StaffEng guides (Will Larson)](https://staffeng.com/guides/) - what senior technical leadership work consists of.
+- [Software Engineering at Google (free online)](https://abseil.io/resources/swe-book/html/toc.html) - chapters on knowledge sharing, code review, documentation, and large-scale change.
+- [Design Docs at Google](https://www.industrialempathy.com/posts/design-docs-at-google/) - the structure and purpose of a design doc.
+- [DORA capabilities catalog](https://dora.dev/capabilities/) - the delivery practices that research links to team performance.
+- [Shape Up (Basecamp)](https://basecamp.com/shapeup) - appetite, scope hammering, and shipping in slices.
+- [Claude Code: Best practices](https://code.claude.com/docs/en/best-practices) - Anthropic's guidance on context, planning, and verification with a coding agent.
+- [GitHub Docs: About Copilot cloud agent](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent) - how GitHub's asynchronous agent works and where it is limited.
+- [Claude Code: Security](https://code.claude.com/docs/en/security) - permissions, sandboxing, and prompt injection safeguards for a coding agent.
+- [AI SDK: Tools and tool calling](https://ai-sdk.dev/docs/ai-sdk-core/tools-and-tool-calling) - defining tools with schemas and running multi-step calls.
+- [Claude API docs: Define success criteria and build evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests) - how to design and grade evals for a model-backed feature.
+- [AGENTS.md](https://agents.md/) - the open format for repository instructions that most coding agents read.
+- [Open Source Guides: How to contribute](https://opensource.guide/how-to-contribute/) - the etiquette and mechanics of contributing.
 
 ## Skills
 

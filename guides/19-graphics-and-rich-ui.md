@@ -47,19 +47,19 @@ Graphics code fails in ways unit tests miss, so split what you verify.
 
 ### Official references
 
-- [MDN: SVG reference](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference) — every element and attribute, with browser support.
-- [SVG 2 specification](https://www.w3.org/TR/SVG2/) — the authority on coordinate systems, painting, and paths.
-- [MDN: Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) — the 2D context reference and tutorial.
-- [WebGL2 Fundamentals](https://webgl2fundamentals.org/) — the best from-first-principles WebGL course.
-- [MDN: WebGPU API](https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API) — concepts and interfaces; pair with the [gpuweb implementation status](https://github.com/gpuweb/gpuweb/wiki/Implementation-Status) page.
-- [Three.js manual](https://threejs.org/manual/) and [Three.js docs](https://threejs.org/docs/) — guides and API reference.
-- [D3 documentation](https://d3js.org/) — scales, shapes, axes, zoom, brush, and array utilities.
-- [MapLibre GL JS documentation](https://maplibre.org/maplibre-gl-js/docs/) — the map renderer's API and examples; the [style spec](https://maplibre.org/maplibre-style-spec/) defines sources, layers, and expressions.
-- [Observable Plot documentation](https://observablehq.com/plot/) — the concise grammar-of-graphics library from the D3 team.
-- [MDN: Pointer events](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events) — the unified input model for mouse, touch, and pen.
-- [dnd-kit documentation](https://dndkit.com/) — the current drag and drop toolkit and its React adapter.
-- [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) — keyboard patterns for grids, sliders, and listboxes that custom widgets should follow.
-- [MDN: Media technologies](https://developer.mozilla.org/en-US/docs/Web/Media) — media elements, formats, MSE, WebRTC, and Web Audio guides.
+- [MDN: SVG reference](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference) - every element and attribute, with browser support.
+- [SVG 2 specification](https://www.w3.org/TR/SVG2/) - the authority on coordinate systems, painting, and paths.
+- [MDN: Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) - the 2D context reference and tutorial.
+- [WebGL2 Fundamentals](https://webgl2fundamentals.org/) - the best from-first-principles WebGL course.
+- [MDN: WebGPU API](https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API) - concepts and interfaces; pair with the [gpuweb implementation status](https://github.com/gpuweb/gpuweb/wiki/Implementation-Status) page.
+- [Three.js manual](https://threejs.org/manual/) and [Three.js docs](https://threejs.org/docs/) - guides and API reference.
+- [D3 documentation](https://d3js.org/) - scales, shapes, axes, zoom, brush, and array utilities.
+- [MapLibre GL JS documentation](https://maplibre.org/maplibre-gl-js/docs/) - the map renderer's API and examples; the [style spec](https://maplibre.org/maplibre-style-spec/) defines sources, layers, and expressions.
+- [Observable Plot documentation](https://observablehq.com/plot/) - the concise grammar-of-graphics library from the D3 team.
+- [MDN: Pointer events](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events) - the unified input model for mouse, touch, and pen.
+- [dnd-kit documentation](https://dndkit.com/) - the current drag and drop toolkit and its React adapter.
+- [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) - keyboard patterns for grids, sliders, and listboxes that custom widgets should follow.
+- [MDN: Media technologies](https://developer.mozilla.org/en-US/docs/Web/Media) - media elements, formats, MSE, WebRTC, and Web Audio guides.
 
 ## Skills
 

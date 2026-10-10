@@ -44,14 +44,14 @@ Paragraphs, `-` bullet lists, `1.` numbered lists, fenced code blocks with a lan
 
 Four sections with exactly these headings, 150–350 words each, specific to this module:
 
-- **DevTools and tooling** — the browser DevTools panels and features, CLI tools, editor extensions, linters, and playgrounds that matter for this topic, and how to actually use each one (which panel, which setting, which command, what to look for).
-- **Testing and verifying your work** — how you check that work in this area is correct: validators, automated tests, manual checks, what "done" looks like.
-- **Tricks and gotchas** — a bullet list of practical tips, shortcuts, and common traps that experienced engineers know.
-- **Official references** — a bullet list of the canonical docs and specs for the module, one line each on what it is for.
+- **DevTools and tooling** - the browser DevTools panels and features, CLI tools, editor extensions, linters, and playgrounds that matter for this topic, and how to actually use each one (which panel, which setting, which command, what to look for).
+- **Testing and verifying your work** - how you check that work in this area is correct: validators, automated tests, manual checks, what "done" looks like.
+- **Tricks and gotchas** - a bullet list of practical tips, shortcuts, and common traps that experienced engineers know.
+- **Official references** - a bullet list of the canonical docs and specs for the module, one line each on what it is for.
 
 ### Skills
 
-One `### ` entry for every checklist item in `path/NN-slug.md`, in the same order. The heading must be the skill's name exactly: the item text before the ` — `, including any backticks. Entries must not contain headings of their own.
+One `### ` entry for every checklist item in `path/NN-slug.md`, in the same order. The heading must be the skill's name exactly: the item text before the ` - `, including any backticks. Entries must not contain headings of their own.
 
 Each entry is 150–300 words (more only where the topic needs it) and has, in this order:
 

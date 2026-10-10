@@ -50,18 +50,18 @@ For delivery work, "done" means you watched the mechanism work, including the fa
 
 ### Official references
 
-- [GitHub Actions documentation](https://docs.github.com/en/actions) — workflows, runners, caching, environments, and security hardening.
-- [GitHub Docs: Workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax) — every key you can write in a workflow file.
-- [Vercel documentation](https://vercel.com/docs) — deployments, functions, CDN cache, skew protection, rolling releases.
-- [Cloudflare Workers documentation](https://developers.cloudflare.com/workers/) — runtime, limits, static assets, versions and gradual deployments.
-- [Netlify documentation](https://docs.netlify.com/) — deploys, deploy previews, functions, and edge functions.
-- [Docker docs: Building best practices](https://docs.docker.com/build/building/best-practices/) — multi-stage builds, layer caching, and image hygiene.
-- [MDN: HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) — how browser and shared caches decide what to reuse.
-- [Sentry docs: JavaScript](https://docs.sentry.io/platforms/javascript/) — SDK setup, source maps, releases, tracing, and replay.
-- [OpenTelemetry docs: JavaScript](https://opentelemetry.io/docs/languages/js/) — vendor-neutral traces, metrics, and logs.
-- [web.dev: Best practices for measuring Web Vitals in the field](https://web.dev/articles/vitals-field-measurement-best-practices) — how to collect and report RUM data.
-- [Google SRE Book](https://sre.google/sre-book/table-of-contents/) and [SRE Workbook](https://sre.google/workbook/table-of-contents/) — SLOs, alerting, incident response, postmortems, on-call.
-- [PostgreSQL docs: Using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — reading query plans.
+- [GitHub Actions documentation](https://docs.github.com/en/actions) - workflows, runners, caching, environments, and security hardening.
+- [GitHub Docs: Workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax) - every key you can write in a workflow file.
+- [Vercel documentation](https://vercel.com/docs) - deployments, functions, CDN cache, skew protection, rolling releases.
+- [Cloudflare Workers documentation](https://developers.cloudflare.com/workers/) - runtime, limits, static assets, versions and gradual deployments.
+- [Netlify documentation](https://docs.netlify.com/) - deploys, deploy previews, functions, and edge functions.
+- [Docker docs: Building best practices](https://docs.docker.com/build/building/best-practices/) - multi-stage builds, layer caching, and image hygiene.
+- [MDN: HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) - how browser and shared caches decide what to reuse.
+- [Sentry docs: JavaScript](https://docs.sentry.io/platforms/javascript/) - SDK setup, source maps, releases, tracing, and replay.
+- [OpenTelemetry docs: JavaScript](https://opentelemetry.io/docs/languages/js/) - vendor-neutral traces, metrics, and logs.
+- [web.dev: Best practices for measuring Web Vitals in the field](https://web.dev/articles/vitals-field-measurement-best-practices) - how to collect and report RUM data.
+- [Google SRE Book](https://sre.google/sre-book/table-of-contents/) and [SRE Workbook](https://sre.google/workbook/table-of-contents/) - SLOs, alerting, incident response, postmortems, on-call.
+- [PostgreSQL docs: Using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) - reading query plans.
 
 ## Skills
 
@@ -1150,7 +1150,7 @@ To diagnose, bypass layers one at a time: hard reload (browser cache), a cache-b
 **Resources**
 - [MDN: HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching)
 - [web.dev: Keeping things fresh with stale-while-revalidate](https://web.dev/articles/stale-while-revalidate)
-- [AWS: Database caching strategies using Redis — caching patterns](https://docs.aws.amazon.com/whitepapers/latest/database-caching-strategies-using-redis/caching-patterns.html)
+- [AWS: Database caching strategies using Redis - caching patterns](https://docs.aws.amazon.com/whitepapers/latest/database-caching-strategies-using-redis/caching-patterns.html)
 
 ### Queues and async work
 

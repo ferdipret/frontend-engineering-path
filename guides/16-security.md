@@ -57,16 +57,16 @@ Security is verified by trying to break your own work, in a safe environment, an
 
 ### Official references
 
-- [MDN: Web security](https://developer.mozilla.org/en-US/docs/Web/Security) — the hub for the browser security model, attacks, and defences.
-- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/) — concise, practical defensive guidance per topic.
-- [OWASP Top 10:2025](https://top10.owasp.org/2025/) — the current ranking of the most critical web application risk categories.
-- [PortSwigger Web Security Academy](https://portswigger.net/web-security) — free explanations and hands-on labs for every vulnerability class.
-- [web.dev: Mitigate XSS with a strict CSP](https://web.dev/articles/strict-csp) — the recommended nonce- or hash-based policy.
-- [W3C: Content Security Policy Level 3](https://w3c.github.io/webappsec-csp/) — the normative definition of CSP directives.
-- [WHATWG Fetch Standard: CORS protocol](https://fetch.spec.whatwg.org/#http-cors-protocol) — the definitive rules for CORS.
-- [MDN: HTTP headers reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers) — syntax and browser support for every security header.
-- [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/) — a detailed checklist of security requirements to review against.
-- [RFC 9700: Best Current Practice for OAuth 2.0 Security](https://datatracker.ietf.org/doc/html/rfc9700) — the current rules for OAuth deployments.
+- [MDN: Web security](https://developer.mozilla.org/en-US/docs/Web/Security) - the hub for the browser security model, attacks, and defences.
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/) - concise, practical defensive guidance per topic.
+- [OWASP Top 10:2025](https://top10.owasp.org/2025/) - the current ranking of the most critical web application risk categories.
+- [PortSwigger Web Security Academy](https://portswigger.net/web-security) - free explanations and hands-on labs for every vulnerability class.
+- [web.dev: Mitigate XSS with a strict CSP](https://web.dev/articles/strict-csp) - the recommended nonce- or hash-based policy.
+- [W3C: Content Security Policy Level 3](https://w3c.github.io/webappsec-csp/) - the normative definition of CSP directives.
+- [WHATWG Fetch Standard: CORS protocol](https://fetch.spec.whatwg.org/#http-cors-protocol) - the definitive rules for CORS.
+- [MDN: HTTP headers reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers) - syntax and browser support for every security header.
+- [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/) - a detailed checklist of security requirements to review against.
+- [RFC 9700: Best Current Practice for OAuth 2.0 Security](https://datatracker.ietf.org/doc/html/rfc9700) - the current rules for OAuth deployments.
 
 ## Skills
 

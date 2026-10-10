@@ -48,17 +48,17 @@ Keep a `docs/evidence.md` in each capstone that links to the test runs, the audi
 
 ### Official references
 
-- [Design Docs at Google](https://www.industrialempathy.com/posts/design-docs-at-google/) — what a design doc contains and when to write one.
-- [WCAG 2.2 quick reference](https://www.w3.org/WAI/WCAG22/quickref/) — every success criterion with techniques, filterable to level AA.
-- [ARIA Authoring Practices Guide: Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) — expected keyboard behaviour and ARIA for common widgets.
-- [web.dev: Web Vitals](https://web.dev/articles/vitals) — the metrics, the thresholds, and how they are measured.
-- [Chrome UX Report documentation](https://developer.chrome.com/docs/crux) — where public field data comes from and its eligibility rules.
-- [Lighthouse CI: Getting started](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md) — running Lighthouse and assertions in a pipeline.
-- [Playwright: Best practices](https://playwright.dev/docs/best-practices) — writing end-to-end tests that are stable.
-- [GitHub Actions documentation](https://docs.github.com/en/actions) — workflows, environments, and deployment.
-- [Sentry: JavaScript](https://docs.sentry.io/platforms/javascript/) — error tracking setup, releases, and source maps.
-- [Google SRE book: Postmortem culture](https://sre.google/sre-book/postmortem-culture/) — how to write about what went wrong without blame.
-- [Semantic Versioning 2.0.0](https://semver.org/) — the contract your published packages make.
+- [Design Docs at Google](https://www.industrialempathy.com/posts/design-docs-at-google/) - what a design doc contains and when to write one.
+- [WCAG 2.2 quick reference](https://www.w3.org/WAI/WCAG22/quickref/) - every success criterion with techniques, filterable to level AA.
+- [ARIA Authoring Practices Guide: Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) - expected keyboard behaviour and ARIA for common widgets.
+- [web.dev: Web Vitals](https://web.dev/articles/vitals) - the metrics, the thresholds, and how they are measured.
+- [Chrome UX Report documentation](https://developer.chrome.com/docs/crux) - where public field data comes from and its eligibility rules.
+- [Lighthouse CI: Getting started](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md) - running Lighthouse and assertions in a pipeline.
+- [Playwright: Best practices](https://playwright.dev/docs/best-practices) - writing end-to-end tests that are stable.
+- [GitHub Actions documentation](https://docs.github.com/en/actions) - workflows, environments, and deployment.
+- [Sentry: JavaScript](https://docs.sentry.io/platforms/javascript/) - error tracking setup, releases, and source maps.
+- [Google SRE book: Postmortem culture](https://sre.google/sre-book/postmortem-culture/) - how to write about what went wrong without blame.
+- [Semantic Versioning 2.0.0](https://semver.org/) - the contract your published packages make.
 
 ## Skills
 

@@ -50,17 +50,17 @@ When something is off, do not guess. Inspect the element, read the Computed pane
 
 ### Official references
 
-- [MDN: CSS reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) — every property, selector, at-rule, and function, with compatibility tables.
-- [web.dev: Learn CSS](https://web.dev/learn/css) — a structured course from the Chrome team that covers the whole language.
-- [CSS Working Group: current work](https://www.w3.org/Style/CSS/current-work) — the index of all CSS specifications and their status.
-- [CSS Cascading and Inheritance Level 5](https://drafts.csswg.org/css-cascade-5/) — the cascade, layers, and inheritance, defined precisely.
-- [CSS Display Level 3](https://drafts.csswg.org/css-display-3/) — formatting contexts, `display` values, and the box tree.
-- [CSS Grid Layout Level 2](https://drafts.csswg.org/css-grid-2/) — the grid specification, including subgrid.
-- [CSS Flexible Box Layout Level 1](https://drafts.csswg.org/css-flexbox-1/) — the flexbox specification, including the flex sizing algorithm.
-- [web.dev: Baseline](https://web.dev/baseline) — what "widely available" and "newly available" mean and how to use them in decisions.
-- [Chrome for Developers: CSS and UI](https://developer.chrome.com/docs/css-ui) — guides to the newer features such as anchor positioning, scroll-driven animations, and view transitions.
-- [Chrome DevTools: View and change CSS](https://developer.chrome.com/docs/devtools/css) — the official guide to the Styles and Computed panes.
-- [Stylelint: Getting started](https://stylelint.io/user-guide/get-started) — how to set up the linter.
+- [MDN: CSS reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) - every property, selector, at-rule, and function, with compatibility tables.
+- [web.dev: Learn CSS](https://web.dev/learn/css) - a structured course from the Chrome team that covers the whole language.
+- [CSS Working Group: current work](https://www.w3.org/Style/CSS/current-work) - the index of all CSS specifications and their status.
+- [CSS Cascading and Inheritance Level 5](https://drafts.csswg.org/css-cascade-5/) - the cascade, layers, and inheritance, defined precisely.
+- [CSS Display Level 3](https://drafts.csswg.org/css-display-3/) - formatting contexts, `display` values, and the box tree.
+- [CSS Grid Layout Level 2](https://drafts.csswg.org/css-grid-2/) - the grid specification, including subgrid.
+- [CSS Flexible Box Layout Level 1](https://drafts.csswg.org/css-flexbox-1/) - the flexbox specification, including the flex sizing algorithm.
+- [web.dev: Baseline](https://web.dev/baseline) - what "widely available" and "newly available" mean and how to use them in decisions.
+- [Chrome for Developers: CSS and UI](https://developer.chrome.com/docs/css-ui) - guides to the newer features such as anchor positioning, scroll-driven animations, and view transitions.
+- [Chrome DevTools: View and change CSS](https://developer.chrome.com/docs/devtools/css) - the official guide to the Styles and Computed panes.
+- [Stylelint: Getting started](https://stylelint.io/user-guide/get-started) - how to set up the linter.
 
 ## Skills
 

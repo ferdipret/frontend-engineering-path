@@ -45,17 +45,17 @@ A PWA has more states than a normal site, so test them deliberately.
 
 ### Official references
 
-- [web.dev: Learn PWA](https://web.dev/learn/pwa) — the structured course covering every topic in this module.
-- [MDN: Progressive web apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) — guides and reference, including manifest members.
-- [Chrome: Workbox](https://developer.chrome.com/docs/workbox) — official documentation for every Workbox module.
-- [Service Workers specification](https://w3c.github.io/ServiceWorker/) — normative lifecycle and Cache API definitions.
-- [Web Application Manifest specification](https://www.w3.org/TR/appmanifest/) — the manifest members as specified.
-- [MDN: Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) — API reference with compatibility tables.
-- [MDN: Storage quotas and eviction criteria](https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) — per-browser limits and eviction rules.
-- [Chrome: Capabilities](https://developer.chrome.com/docs/capabilities) — documentation for Project Fugu APIs.
-- [WebKit blog](https://webkit.org/blog/) — the primary source for what each Safari release supports.
-- [Chrome DevTools: Remote debug Android devices](https://developer.chrome.com/docs/devtools/remote-debugging) — setting up `chrome://inspect`.
-- [Workbox releases on GitHub](https://github.com/GoogleChrome/workbox/releases) — current version and changelog.
+- [web.dev: Learn PWA](https://web.dev/learn/pwa) - the structured course covering every topic in this module.
+- [MDN: Progressive web apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) - guides and reference, including manifest members.
+- [Chrome: Workbox](https://developer.chrome.com/docs/workbox) - official documentation for every Workbox module.
+- [Service Workers specification](https://w3c.github.io/ServiceWorker/) - normative lifecycle and Cache API definitions.
+- [Web Application Manifest specification](https://www.w3.org/TR/appmanifest/) - the manifest members as specified.
+- [MDN: Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) - API reference with compatibility tables.
+- [MDN: Storage quotas and eviction criteria](https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) - per-browser limits and eviction rules.
+- [Chrome: Capabilities](https://developer.chrome.com/docs/capabilities) - documentation for Project Fugu APIs.
+- [WebKit blog](https://webkit.org/blog/) - the primary source for what each Safari release supports.
+- [Chrome DevTools: Remote debug Android devices](https://developer.chrome.com/docs/devtools/remote-debugging) - setting up `chrome://inspect`.
+- [Workbox releases on GitHub](https://github.com/GoogleChrome/workbox/releases) - current version and changelog.
 
 ## Skills
 

@@ -138,7 +138,7 @@ function SkillItem({ item, open, onToggle }: { item: SkillRow; open: boolean; on
             {item.whyHtml && (
               <>
                 {" "}
-                <span className="why" dangerouslySetInnerHTML={{ __html: `— ${item.whyHtml}` }} />
+                <span className="why" dangerouslySetInnerHTML={{ __html: `- ${item.whyHtml}` }} />
               </>
             )}
           </span>

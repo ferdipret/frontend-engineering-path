@@ -44,18 +44,18 @@ An architectural rule that is not checked by a machine is a suggestion. "Done" f
 
 ### Official references
 
-- [patterns.dev](https://www.patterns.dev/) — catalogue of rendering, design, and performance patterns with trade-offs.
-- [web.dev: Rendering on the Web](https://web.dev/articles/rendering-on-the-web) — the canonical comparison of CSR, SSR, static rendering, and hydration strategies.
-- [Martin Fowler: Micro Frontends](https://martinfowler.com/articles/micro-frontends.html) — the reference essay on composition approaches and their costs.
-- [Turborepo docs: Structuring a repository](https://turborepo.dev/docs/crafting-your-repository/structuring-a-repository) — workspace layout, internal packages, and task configuration.
-- [Nx docs: Enforce module boundaries](https://nx.dev/docs/features/enforce-module-boundaries) — tag-based dependency constraints.
-- [dependency-cruiser](https://github.com/sverweij/dependency-cruiser) — rules reference and CLI for validating the import graph.
-- [GitHub Docs: About code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) — CODEOWNERS syntax and review rules.
-- [jscodeshift](https://jscodeshift.com/) and [ast-grep](https://ast-grep.github.io/) — codemod tooling.
-- [Architecture Decision Records](https://adr.github.io/) — templates and tooling for ADRs.
-- [The C4 model](https://c4model.com/) — a small, consistent vocabulary for architecture diagrams.
-- [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) — keyboard and ARIA patterns that system-design answers for widgets must follow.
-- [GreatFrontEnd: Front End System Design Playbook](https://www.greatfrontend.com/front-end-system-design-playbook) — a structured approach to frontend design interviews.
+- [patterns.dev](https://www.patterns.dev/) - catalogue of rendering, design, and performance patterns with trade-offs.
+- [web.dev: Rendering on the Web](https://web.dev/articles/rendering-on-the-web) - the canonical comparison of CSR, SSR, static rendering, and hydration strategies.
+- [Martin Fowler: Micro Frontends](https://martinfowler.com/articles/micro-frontends.html) - the reference essay on composition approaches and their costs.
+- [Turborepo docs: Structuring a repository](https://turborepo.dev/docs/crafting-your-repository/structuring-a-repository) - workspace layout, internal packages, and task configuration.
+- [Nx docs: Enforce module boundaries](https://nx.dev/docs/features/enforce-module-boundaries) - tag-based dependency constraints.
+- [dependency-cruiser](https://github.com/sverweij/dependency-cruiser) - rules reference and CLI for validating the import graph.
+- [GitHub Docs: About code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) - CODEOWNERS syntax and review rules.
+- [jscodeshift](https://jscodeshift.com/) and [ast-grep](https://ast-grep.github.io/) - codemod tooling.
+- [Architecture Decision Records](https://adr.github.io/) - templates and tooling for ADRs.
+- [The C4 model](https://c4model.com/) - a small, consistent vocabulary for architecture diagrams.
+- [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) - keyboard and ARIA patterns that system-design answers for widgets must follow.
+- [GreatFrontEnd: Front End System Design Playbook](https://www.greatfrontend.com/front-end-system-design-playbook) - a structured approach to frontend design interviews.
 
 ## Skills
 

@@ -50,18 +50,18 @@ For tooling, "correct" means reproducible: someone else, or a clean machine, get
 
 ### Official references
 
-- [Pro Git (free book)](https://git-scm.com/book/en/v2) — the complete, readable explanation of Git's model and commands.
-- [Git reference manual](https://git-scm.com/docs) — the authoritative page for every command and option.
-- [GitHub Docs: Pull requests](https://docs.github.com/en/pull-requests) — creating, reviewing, and merging pull requests and working with forks.
-- [GNU Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html) — the definitive description of shell syntax, expansion, and redirection.
-- [Node.js documentation](https://nodejs.org/docs/latest/api/) — the API reference for every built-in module and CLI flag.
-- [npm Docs](https://docs.npmjs.com/) — the CLI commands, `package.json` fields, and configuration.
-- [Semantic Versioning 2.0.0](https://semver.org/) — the specification version numbers are meant to follow.
-- [Visual Studio Code documentation](https://code.visualstudio.com/docs) — editing features, settings, and debugging.
-- [Prettier documentation](https://prettier.io/docs/), [Biome documentation](https://biomejs.dev/guides/getting-started/), and [ESLint documentation](https://eslint.org/docs/latest/) — setup, options, and rule references for the code quality tools.
-- [Chrome DevTools documentation](https://developer.chrome.com/docs/devtools) — guides and references for every panel.
-- [Firefox DevTools User Docs](https://firefox-source-docs.mozilla.org/devtools-user/) — the equivalent for Firefox.
-- [The Missing Semester of Your CS Education (MIT)](https://missing.csail.mit.edu/) — an excellent free course on the shell, editors, and Git.
+- [Pro Git (free book)](https://git-scm.com/book/en/v2) - the complete, readable explanation of Git's model and commands.
+- [Git reference manual](https://git-scm.com/docs) - the authoritative page for every command and option.
+- [GitHub Docs: Pull requests](https://docs.github.com/en/pull-requests) - creating, reviewing, and merging pull requests and working with forks.
+- [GNU Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html) - the definitive description of shell syntax, expansion, and redirection.
+- [Node.js documentation](https://nodejs.org/docs/latest/api/) - the API reference for every built-in module and CLI flag.
+- [npm Docs](https://docs.npmjs.com/) - the CLI commands, `package.json` fields, and configuration.
+- [Semantic Versioning 2.0.0](https://semver.org/) - the specification version numbers are meant to follow.
+- [Visual Studio Code documentation](https://code.visualstudio.com/docs) - editing features, settings, and debugging.
+- [Prettier documentation](https://prettier.io/docs/), [Biome documentation](https://biomejs.dev/guides/getting-started/), and [ESLint documentation](https://eslint.org/docs/latest/) - setup, options, and rule references for the code quality tools.
+- [Chrome DevTools documentation](https://developer.chrome.com/docs/devtools) - guides and references for every panel.
+- [Firefox DevTools User Docs](https://firefox-source-docs.mozilla.org/devtools-user/) - the equivalent for Firefox.
+- [The Missing Semester of Your CS Education (MIT)](https://missing.csail.mit.edu/) - an excellent free course on the shell, editors, and Git.
 
 ## Skills
 
@@ -537,7 +537,7 @@ You do not need to get it right first time. Commit freely while working, then ti
 **Try it:** Take your last piece of work with messy commits, and use `git rebase -i` to restructure it into commits that each do one thing with a subject and a "why" body. Check the result with `git log --oneline` and `git show` on each.
 
 **Resources**
-- [Pro Git: Contributing to a project — commit guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project)
+- [Pro Git: Contributing to a project - commit guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project)
 - [Chris Beams: How to write a Git commit message](https://cbea.ms/git-commit/)
 - [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/)
 
@@ -1381,7 +1381,7 @@ Use device mode for quick iteration on layout, then verify on real hardware. And
 **Resources**
 - [Chrome DevTools: Simulate mobile devices with device mode](https://developer.chrome.com/docs/devtools/device-mode)
 - [Chrome DevTools: Remote debug Android devices](https://developer.chrome.com/docs/devtools/remote-debugging)
-- [Chrome DevTools: Sensors — emulate device sensors](https://developer.chrome.com/docs/devtools/sensors)
+- [Chrome DevTools: Sensors - emulate device sensors](https://developer.chrome.com/docs/devtools/sensors)
 
 ### Performance and Lighthouse
 
@@ -1412,7 +1412,7 @@ Reading Lighthouse results sensibly:
 **Try it:** Run Lighthouse in mobile mode on a production site three times and note how much the performance score varies. Then record a page load in the Performance panel with 4x CPU throttling, identify the LCP element from the insights, and find the longest task in the Main track and the function responsible.
 
 **Resources**
-- [Chrome DevTools: Performance panel — analyze your website's performance](https://developer.chrome.com/docs/devtools/performance/overview)
+- [Chrome DevTools: Performance panel - analyze your website's performance](https://developer.chrome.com/docs/devtools/performance/overview)
 - [Chrome for Developers: Introduction to Lighthouse](https://developer.chrome.com/docs/lighthouse/overview)
 - [web.dev: Web Vitals](https://web.dev/articles/vitals)
 

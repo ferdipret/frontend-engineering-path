@@ -50,17 +50,17 @@ A practical checklist for "done" on a piece of browser-API code:
 
 ### Official references
 
-- [MDN: Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) — the index of every browser API, each with a Baseline support banner and compatibility table.
-- [DOM Standard (WHATWG)](https://dom.spec.whatwg.org/) — the definition of nodes, trees, events and dispatch, `AbortController`, and `MutationObserver`.
-- [HTML Standard (WHATWG)](https://html.spec.whatwg.org/multipage/) — everything DOM-adjacent: forms, the event loop, custom elements, history and navigation, workers, storage.
-- [Fetch Standard (WHATWG)](https://fetch.spec.whatwg.org/) — the precise rules for requests, responses, and the CORS protocol.
-- [URL Standard (WHATWG)](https://url.spec.whatwg.org/) — how URLs are parsed and serialised, and the `URL`/`URLSearchParams` API.
-- [Streams Standard (WHATWG)](https://streams.spec.whatwg.org/) — readable, writable, and transform streams.
-- [ECMA-402: ECMAScript Internationalization API](https://tc39.es/ecma402/) — the specification for `Intl`.
-- [web.dev: Learn JavaScript and platform articles](https://web.dev/articles) — task-oriented guidance from the Chrome team on performance, storage, and page lifecycle.
-- [Chrome DevTools documentation](https://developer.chrome.com/docs/devtools) — how to use each panel referenced in this guide.
-- [Baseline (web.dev)](https://web.dev/baseline) — what "widely available" and "newly available" mean when you check whether a feature is safe to use.
-- [javascript.info: Browser — Document, Events, Interfaces](https://javascript.info/ui) — the best independent long-form tutorial on the DOM and events.
+- [MDN: Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) - the index of every browser API, each with a Baseline support banner and compatibility table.
+- [DOM Standard (WHATWG)](https://dom.spec.whatwg.org/) - the definition of nodes, trees, events and dispatch, `AbortController`, and `MutationObserver`.
+- [HTML Standard (WHATWG)](https://html.spec.whatwg.org/multipage/) - everything DOM-adjacent: forms, the event loop, custom elements, history and navigation, workers, storage.
+- [Fetch Standard (WHATWG)](https://fetch.spec.whatwg.org/) - the precise rules for requests, responses, and the CORS protocol.
+- [URL Standard (WHATWG)](https://url.spec.whatwg.org/) - how URLs are parsed and serialised, and the `URL`/`URLSearchParams` API.
+- [Streams Standard (WHATWG)](https://streams.spec.whatwg.org/) - readable, writable, and transform streams.
+- [ECMA-402: ECMAScript Internationalization API](https://tc39.es/ecma402/) - the specification for `Intl`.
+- [web.dev: Learn JavaScript and platform articles](https://web.dev/articles) - task-oriented guidance from the Chrome team on performance, storage, and page lifecycle.
+- [Chrome DevTools documentation](https://developer.chrome.com/docs/devtools) - how to use each panel referenced in this guide.
+- [Baseline (web.dev)](https://web.dev/baseline) - what "widely available" and "newly available" mean when you check whether a feature is safe to use.
+- [javascript.info: Browser - Document, Events, Interfaces](https://javascript.info/ui) - the best independent long-form tutorial on the DOM and events.
 
 ## Skills
 
@@ -371,7 +371,7 @@ Limits to know about: events that do not bubble need a bubbling equivalent (`foc
 
 **Resources**
 - [javascript.info: Event delegation](https://javascript.info/event-delegation)
-- [MDN: Event bubbling — event delegation](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling#event_delegation)
+- [MDN: Event bubbling - event delegation](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling#event_delegation)
 - [MDN: Element.closest()](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest)
 
 ### Pointer and keyboard events
@@ -742,7 +742,7 @@ When another tab on the same origin changes `localStorage`, your tab receives a 
 Cookies are small name-value pairs that the browser attaches to every matching HTTP request. That automatic sending is what makes them suitable for sessions, and what distinguishes them from Web Storage. They are normally set by the server with a `Set-Cookie` response header, and script can also read and write some of them through `document.cookie`, which has an odd interface:
 
 ```js
-document.cookie;  // "theme=dark; lang=en" — every visible cookie in one string
+document.cookie;  // "theme=dark; lang=en" - every visible cookie in one string
 
 // Assignment sets or updates ONE cookie; it does not replace the string
 document.cookie = `theme=${encodeURIComponent('dark')}; Max-Age=31536000; Path=/; SameSite=Lax; Secure`;

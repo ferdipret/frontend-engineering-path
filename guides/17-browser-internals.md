@@ -41,17 +41,17 @@ Knowledge about internals is only useful if you can confirm it on a real page, s
 
 ### Official references
 
-- [Chrome: Inside look at modern web browser, part 1](https://developer.chrome.com/blog/inside-browser-part1) — the four-part overview of processes, navigation, rendering, and input.
-- [Chrome: RenderingNG](https://developer.chrome.com/docs/chromium/renderingng) — the authoritative series on Chromium's current rendering architecture.
-- [HTML Standard: Event loops](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops) — the normative definition of tasks, microtasks, and rendering updates.
-- [HTML Standard: Parsing HTML documents](https://html.spec.whatwg.org/multipage/parsing.html) — the tokeniser and tree construction algorithms.
-- [ECMAScript Language Specification](https://tc39.es/ecma262/) — the JavaScript language itself.
-- [V8 blog](https://v8.dev/blog) — primary source for V8's compilers, object model, and garbage collector.
-- [WebKit blog](https://webkit.org/blog/) — JavaScriptCore and WebKit engineering posts and Safari release notes.
-- [Web Browser Engineering](https://browser.engineering/) — a free book that builds a browser from scratch; the best way to learn why the pipeline has its shape.
-- [Chrome DevTools: Performance features reference](https://developer.chrome.com/docs/devtools/performance/reference) — every control and track in the Performance panel.
-- [Service Workers specification](https://w3c.github.io/ServiceWorker/) — lifecycle and fetch handling as specified.
-- [Web Platform Status](https://webstatus.dev/) — Baseline status and browser support for every tracked feature.
+- [Chrome: Inside look at modern web browser, part 1](https://developer.chrome.com/blog/inside-browser-part1) - the four-part overview of processes, navigation, rendering, and input.
+- [Chrome: RenderingNG](https://developer.chrome.com/docs/chromium/renderingng) - the authoritative series on Chromium's current rendering architecture.
+- [HTML Standard: Event loops](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops) - the normative definition of tasks, microtasks, and rendering updates.
+- [HTML Standard: Parsing HTML documents](https://html.spec.whatwg.org/multipage/parsing.html) - the tokeniser and tree construction algorithms.
+- [ECMAScript Language Specification](https://tc39.es/ecma262/) - the JavaScript language itself.
+- [V8 blog](https://v8.dev/blog) - primary source for V8's compilers, object model, and garbage collector.
+- [WebKit blog](https://webkit.org/blog/) - JavaScriptCore and WebKit engineering posts and Safari release notes.
+- [Web Browser Engineering](https://browser.engineering/) - a free book that builds a browser from scratch; the best way to learn why the pipeline has its shape.
+- [Chrome DevTools: Performance features reference](https://developer.chrome.com/docs/devtools/performance/reference) - every control and track in the Performance panel.
+- [Service Workers specification](https://w3c.github.io/ServiceWorker/) - lifecycle and fetch handling as specified.
+- [Web Platform Status](https://webstatus.dev/) - Baseline status and browser support for every tracked feature.
 
 ## Skills
 

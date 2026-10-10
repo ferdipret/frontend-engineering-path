@@ -47,16 +47,16 @@ Styling work is verified by looking, so make the looking systematic.
 
 ### Official references
 
-- [MDN: Cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) — how `@layer` orders styles independent of specificity.
-- [Tailwind CSS documentation](https://tailwindcss.com/docs/styling-with-utility-classes) — utility-first styling, theme variables, variants, and directives.
-- [Design Tokens Format Module 2025.10](https://www.designtokens.org/tr/2025.10/format/) — the stable community specification for token files.
-- [Style Dictionary documentation](https://styledictionary.com/getting-started/installation/) — the standard tool for transforming tokens into platform code.
-- [Storybook documentation](https://storybook.js.org/docs) — writing stories, docs, and tests for components.
-- [WAI-ARIA Authoring Practices Guide: Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) — expected keyboard and ARIA behaviour for common widgets.
-- [WCAG 2.2: Understanding Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) — the contrast requirement and how it is measured.
-- [Playwright: Visual comparisons](https://playwright.dev/docs/test-snapshots) — screenshot assertions and their options.
-- [Chrome for Developers: View transitions](https://developer.chrome.com/docs/web-platform/view-transitions) — same-document and cross-document transitions.
-- [Semantic Versioning 2.0.0](https://semver.org/) — the contract behind version numbers.
+- [MDN: Cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) - how `@layer` orders styles independent of specificity.
+- [Tailwind CSS documentation](https://tailwindcss.com/docs/styling-with-utility-classes) - utility-first styling, theme variables, variants, and directives.
+- [Design Tokens Format Module 2025.10](https://www.designtokens.org/tr/2025.10/format/) - the stable community specification for token files.
+- [Style Dictionary documentation](https://styledictionary.com/getting-started/installation/) - the standard tool for transforming tokens into platform code.
+- [Storybook documentation](https://storybook.js.org/docs) - writing stories, docs, and tests for components.
+- [WAI-ARIA Authoring Practices Guide: Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) - expected keyboard and ARIA behaviour for common widgets.
+- [WCAG 2.2: Understanding Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) - the contrast requirement and how it is measured.
+- [Playwright: Visual comparisons](https://playwright.dev/docs/test-snapshots) - screenshot assertions and their options.
+- [Chrome for Developers: View transitions](https://developer.chrome.com/docs/web-platform/view-transitions) - same-document and cross-document transitions.
+- [Semantic Versioning 2.0.0](https://semver.org/) - the contract behind version numbers.
 
 ## Skills
 

@@ -37,6 +37,6 @@ export const slugify = (s: string) =>
 
 /** Splits a checklist item into its name and explanation. */
 export function splitItem(text: string): { what: string; why: string } {
-  const [what = "", ...rest] = text.split(" — ");
-  return { what, why: rest.join(" — ") };
+  const [what = "", ...rest] = text.split(" - ");
+  return { what, why: rest.join(" - ") };
 }
