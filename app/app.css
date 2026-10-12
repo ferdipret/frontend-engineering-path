@@ -201,6 +201,9 @@ h2 { font-family: var(--font-head); font-size: 16px; font-weight: 600; margin: 3
   padding: 12px 14px; overflow-x: auto; margin: 12px 0; font-size: 12.5px; line-height: 1.55;
 }
 .md pre code { background: none; border: 0; padding: 0; font-size: inherit; }
+/* Shiki emits both palettes as variables on every token; dark is the default, light themes opt in below. */
+.md pre, .md pre span { color: var(--shiki-dark); }
+.md pre .line { display: inline-block; min-width: 100%; }
 .md pre[data-lang]::after {
   content: attr(data-lang); position: absolute; top: 6px; right: 10px;
   font: 10px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em;
@@ -466,3 +469,7 @@ dialog#search::backdrop { background: rgb(0 0 0 / 0.55); }
 :root[data-theme="blueprint"] .mod-link[aria-current="page"] { box-shadow: inset 2px 0 0 var(--accent); }
 :root[data-theme="blueprint"] .bar { height: 5px; }
 :root[data-theme="blueprint"] .md a { color: var(--accent); }
+
+/* Light themes use the light code palette. */
+:root[data-theme="paper"] .md pre, :root[data-theme="paper"] .md pre span,
+:root[data-theme="studio"] .md pre, :root[data-theme="studio"] .md pre span { color: var(--shiki-light); }
