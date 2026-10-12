@@ -20,7 +20,9 @@ Run `node scripts/validate.js NN-slug --links` after editing. It checks that gui
 
 ## Markdown that the web view renders
 
-Paragraphs, `-` bullet lists, `1.` numbered lists, fenced code blocks with a language, `inline code`, `**bold**`, `*italic*`, `[links](https://…)`, `> blockquotes`, and simple pipe tables. Do not use nested lists, images, raw HTML, or footnotes. Write HTML tags you mention as inline code, like `<dialog>`.
+GitHub Flavored Markdown, rendered with remark and rehype: paragraphs, nested bullet and numbered lists, fenced code blocks, `inline code`, `**bold**`, `*italic*`, `~~strikethrough~~`, `[links](https://…)`, `> blockquotes`, tables, and footnotes. Always name the language on a code fence (` ```ts `, ` ```css `, ` ```bash `); it is highlighted with Shiki. Raw HTML is dropped by the renderer, so write HTML tags you mention as inline code, like `<dialog>`. Avoid images: there is no place to keep them.
+
+Three structural conventions matter to the parsers, so keep them exact: the ` - ` between a skill's name and description, `- [ ]` task-list syntax for skills and quiz options, and `> ` blockquotes for a quiz answer (the first blockquote after a question starts its answer).
 
 ## `guides/NN-slug.md`
 
