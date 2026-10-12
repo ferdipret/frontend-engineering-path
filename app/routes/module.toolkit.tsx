@@ -2,15 +2,17 @@ import { useEffect } from "react";
 import { useLocation } from "react-router";
 import type { Route } from "./+types/module.toolkit";
 import { loadModule } from "~/lib/content.server.ts";
-import { inline, render } from "~/lib/markdown.ts";
+import { renderInline, renderMarkdown } from "~/lib/markdown.server.ts";
 import { slugify } from "~/lib/stats.ts";
 import type { TocHandle } from "~/components/Toc.tsx";
 
-export function loader({ params }: Route.LoaderArgs) {
+export async function loader({ params }: Route.LoaderArgs) {
   const mod = loadModule(params.slug);
   if (!mod) throw new Response("Not found", { status: 404 });
   return {
-    sections: mod.toolkit.map((t) => ({ id: slugify(t.title), titleHtml: inline(t.title), html: render(t.md) })),
+    sections: await Promise.all(
+      mod.toolkit.map(async (t) => ({ id: slugify(t.title), titleHtml: await renderInline(t.title), html: await renderMarkdown(t.md) })),
+    ),
   };
 }
 

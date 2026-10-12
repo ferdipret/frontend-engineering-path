@@ -3,10 +3,10 @@ import type { Route } from "./+types/module";
 import { ProgressBar } from "~/components/ProgressBar.tsx";
 import { itemsOf, loadModules } from "~/lib/content.server.ts";
 import { getProgress, getQuizResults } from "~/lib/db.server.ts";
-import { inline } from "~/lib/markdown.ts";
+import { renderInline } from "~/lib/markdown.server.ts";
 import { pct } from "~/lib/stats.ts";
 
-export function loader({ params }: Route.LoaderArgs) {
+export async function loader({ params }: Route.LoaderArgs) {
   const modules = loadModules();
   const i = modules.findIndex((m) => m.slug === params.slug);
   const mod = modules[i];
@@ -19,7 +19,7 @@ export function loader({ params }: Route.LoaderArgs) {
     slug: mod.slug,
     title: mod.title,
     stage: mod.stage,
-    summaryHtml: inline(mod.summary),
+    summaryHtml: await renderInline(mod.summary),
     total: items.length,
     done: items.filter((item) => done[item.id]).length,
     questions: mod.quiz.length,

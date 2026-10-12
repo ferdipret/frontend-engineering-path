@@ -1,7 +1,7 @@
 // Turns the parsed modules into flat search documents for the client-side index.
 import type { Doc } from "./search.ts";
 import type { Module } from "./content.server.ts";
-import { plain } from "./markdown.ts";
+import { toPlainText as plain } from "./markdown.server.ts";
 import { slugify, splitItem } from "./stats.ts";
 
 const LINK = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;

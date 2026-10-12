@@ -3,20 +3,22 @@ import { data, useFetcher, useLocation } from "react-router";
 import type { Route } from "./+types/module.quiz";
 import { loadModule } from "~/lib/content.server.ts";
 import { addQuizResult, getQuizResults } from "~/lib/db.server.ts";
-import { inline, render } from "~/lib/markdown.ts";
+import { renderInline, renderMarkdown } from "~/lib/markdown.server.ts";
 import { pct } from "~/lib/stats.ts";
 import type { TocHandle } from "~/components/Toc.tsx";
 
-export function loader({ params }: Route.LoaderArgs) {
+export async function loader({ params }: Route.LoaderArgs) {
   const mod = loadModule(params.slug);
   if (!mod) throw new Response("Not found", { status: 404 });
   const summary = getQuizResults()[mod.slug] ?? null;
   return {
-    questions: mod.quiz.map((q) => ({
-      promptHtml: render(q.prompt),
-      options: q.options.map((o) => ({ html: inline(o.text), correct: o.correct })),
-      answerHtml: render(q.answer),
-    })),
+    questions: await Promise.all(
+      mod.quiz.map(async (q) => ({
+        promptHtml: await renderMarkdown(q.prompt),
+        options: await Promise.all(q.options.map(async (o) => ({ html: await renderInline(o.text), correct: o.correct }))),
+        answerHtml: await renderMarkdown(q.answer),
+      })),
+    ),
     history: summary && { attempts: summary.attempts, best: pct(summary.best.score, summary.best.total), last: pct(summary.last.score, summary.last.total) },
   };
 }

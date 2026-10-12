@@ -3,33 +3,38 @@ import { data, useFetcher, useLocation } from "react-router";
 import type { Route } from "./+types/module.skills";
 import { itemsOf, loadModule } from "~/lib/content.server.ts";
 import { getProgress, setProgress } from "~/lib/db.server.ts";
-import { inline, render } from "~/lib/markdown.ts";
+import { renderInline, renderMarkdown } from "~/lib/markdown.server.ts";
 import { slugify, splitItem } from "~/lib/stats.ts";
 import type { TocHandle } from "~/components/Toc.tsx";
 
 type SkillRow = { kind: "item"; id: string; key: string; whatHtml: string; whyHtml: string; guideHtml: string; done: boolean };
 type Row = SkillRow | { kind: "bullet"; html: string } | { kind: "text"; html: string };
 
-export function loader({ params }: Route.LoaderArgs) {
+export async function loader({ params }: Route.LoaderArgs) {
   const mod = loadModule(params.slug);
   if (!mod) throw new Response("Not found", { status: 404 });
   const done = getProgress();
-  const sections = mod.sections.map((section) => ({
-    title: section.title,
-    rows: section.blocks.map((block): Row => {
-      if (block.type !== "item") return { kind: block.type, html: inline(block.text) };
-      const { what, why } = splitItem(block.text);
-      return {
-        kind: "item",
-        id: block.id,
-        key: block.key,
-        whatHtml: inline(what),
-        whyHtml: inline(why),
-        guideHtml: block.guide ? render(block.guide) : "",
-        done: Boolean(done[block.id]),
-      };
-    }),
-  }));
+  const sections = await Promise.all(
+    mod.sections.map(async (section) => ({
+      title: section.title,
+      titleHtml: await renderInline(section.title),
+      rows: await Promise.all(
+        section.blocks.map(async (block): Promise<Row> => {
+          if (block.type !== "item") return { kind: block.type, html: await renderInline(block.text) };
+          const { what, why } = splitItem(block.text);
+          return {
+            kind: "item",
+            id: block.id,
+            key: block.key,
+            whatHtml: await renderInline(what),
+            whyHtml: await renderInline(why),
+            guideHtml: block.guide ? await renderMarkdown(block.guide) : "",
+            done: Boolean(done[block.id]),
+          };
+        }),
+      ),
+    })),
+  );
   return { sections, hasGuides: itemsOf(mod).some((i) => i.guide) };
 }
 
@@ -89,7 +94,7 @@ export default function Skills({ loaderData }: Route.ComponentProps) {
       )}
       {sections.map((section, i) => (
         <section className="md" key={i}>
-          {section.title && <h2 id={`s-${slugify(section.title)}`} dangerouslySetInnerHTML={{ __html: inline(section.title) }} />}
+          {section.title && <h2 id={`s-${slugify(section.title)}`} dangerouslySetInnerHTML={{ __html: section.titleHtml }} />}
           <Rows rows={section.rows} open={open} onToggle={toggle} />
         </section>
       ))}
