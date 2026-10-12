@@ -1,6 +1,14 @@
-// Parsers for the three kinds of markdown content. See AUTHORING.md for the formats.
+// Readers for the three kinds of content file. See AUTHORING.md for the formats.
+// Structure (modules, sections, skills, guide entries, questions) comes from the markdown AST;
+// the markdown inside each piece is kept as source text and rendered later.
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
+import type { Blockquote, Heading, ListItem, Node, Root, RootContent } from "mdast";
+import { gfmToMarkdown } from "mdast-util-gfm";
+import { toMarkdown } from "mdast-util-to-markdown";
+import { toString as mdastToString } from "mdast-util-to-string";
+import { visit } from "unist-util-visit";
+import { parseMarkdown } from "./markdown.server.ts";
 
 export const ROOT = process.cwd();
 const PATH_DIR = join(ROOT, "path");
@@ -44,118 +52,155 @@ function uniquer() {
   };
 }
 
-const readLines = (file: string) => readFileSync(file, "utf8").split(/\r?\n/);
-const isFence = (line: string) => /^\s*(```|~~~)/.test(line);
+/** The source text of a node, so inline markdown survives. */
+const source = (src: string, node: Node) => src.slice(node.position!.start.offset, node.position!.end.offset);
 
+/** The source text inside a node, without its own marker (the "## " of a heading, the "- " of an item). */
+function inner(src: string, node: Heading | ListItem): string {
+  const first = node.children[0];
+  const last = node.children[node.children.length - 1];
+  if (!first || !last) return "";
+  // A task item's paragraph starts with its checkbox marker; the marker isn't content.
+  if (node.type === "listItem") return source(src, first).replace(/^\[[ xX]\]\s*/, "").trim();
+  return src.slice(first.position!.start.offset, last.position!.end.offset).trim();
+}
+
+/** Nodes back to markdown, for pieces we can't slice from the source (blockquote contents). */
+const markdown = (nodes: RootContent[]) => toMarkdown({ type: "root", children: nodes }, { extensions: [gfmToMarkdown()] }).trim();
+
+// Deliberately not a type guard: a false result must not rule out other heading depths.
+const isHeading = (node: Node, depth: number) => node.type === "heading" && (node as Heading).depth === depth;
+const isTask = (item: ListItem) => item.checked === true || item.checked === false;
+
+/** path/<slug>.md: a title, a stage and summary blockquote, "## " sections holding task-list skills. */
 export function parseModule(file: string): Module {
   const slug = file.replace(/\.md$/, "");
+  const src = readFileSync(join(PATH_DIR, file), "utf8");
   const mod: Module = { slug, title: slug, stage: "Other", summary: "", sections: [], toolkit: [], quiz: [] };
   const unique = uniquer();
   let section: Section | null = null;
-  const ensureSection = () => {
-    if (!section) {
-      section = { title: "", blocks: [] };
-      mod.sections.push(section);
-    }
+  const current = () => {
+    if (!section) mod.sections.push((section = { title: "", blocks: [] }));
     return section;
   };
 
-  for (const raw of readLines(join(PATH_DIR, file))) {
-    const line = raw.trim();
-    let m: RegExpMatchArray | null;
-    if (!line) continue;
-    if ((m = line.match(/^# (.+)/))) {
-      mod.title = m[1]!;
-    } else if ((m = line.match(/^> Stage: (.+)/))) {
-      mod.stage = m[1]!;
-    } else if ((m = line.match(/^> ?(.*)/))) {
-      mod.summary += (mod.summary ? " " : "") + m[1];
-    } else if ((m = line.match(/^## (.+)/))) {
-      section = { title: m[1]!, blocks: [] };
-      mod.sections.push(section);
-    } else if ((m = line.match(/^[-*] \[[ xX]\] (.+)/))) {
-      const key = unique(slugify(skillName(m[1]!)));
-      ensureSection().blocks.push({ type: "item", id: `${slug}/${key}`, key, text: m[1]!, guide: "" });
-    } else if ((m = line.match(/^[-*] (.+)/))) {
-      ensureSection().blocks.push({ type: "bullet", text: m[1]! });
+  for (const node of parseMarkdown(src).children) {
+    if (isHeading(node, 1)) {
+      mod.title = mdastToString(node);
+    } else if (node.type === "blockquote" && !mod.sections.length) {
+      // "> Stage: …" on the first line, the summary on the rest.
+      const lines = source(src, node)
+        .split(/\r?\n/)
+        .map((l) => l.replace(/^>\s?/, "").trim())
+        .filter(Boolean);
+      for (const line of lines) {
+        const stage = line.match(/^Stage: (.+)/);
+        if (stage) mod.stage = stage[1]!;
+        else mod.summary += (mod.summary ? " " : "") + line;
+      }
+    } else if (isHeading(node, 2)) {
+      mod.sections.push((section = { title: inner(src, node as Heading), blocks: [] }));
+    } else if (node.type === "list") {
+      for (const item of node.children) {
+        const text = inner(src, item);
+        if (isTask(item)) {
+          const key = unique(slugify(skillName(text)));
+          current().blocks.push({ type: "item", id: `${slug}/${key}`, key, text, guide: "" });
+        } else current().blocks.push({ type: "bullet", text });
+      }
     } else {
-      ensureSection().blocks.push({ type: "text", text: line });
+      current().blocks.push({ type: "text", text: source(src, node).trim() });
     }
   }
   return mod;
 }
 
-// guides/<slug>.md: "## Toolkit" and "## Skills", each holding "### " entries.
-// Skill entries are keyed by the slug of their heading, which must equal a checklist skill name.
+/** guides/<slug>.md: "## Toolkit" and "## Skills", each holding "### " entries whose bodies are markdown. */
 export function parseGuide(slug: string): Guide | null {
   const file = join(GUIDE_DIR, `${slug}.md`);
   if (!existsSync(file)) return null;
+  const src = readFileSync(file, "utf8");
   const guide: Guide = { toolkit: [], skills: {}, skillTitles: {} };
   const unique = uniquer();
   let mode: "toolkit" | "skills" | null = null;
-  let entry: { title: string; key?: string; lines: string[] } | null = null;
-  let fenced = false;
+  // Kept in an object so the closure below and the loop see the same value.
+  const state: { entry: { title: string; start: number; end: number } | null } = { entry: null };
   const close = () => {
+    const entry = state.entry;
     if (!entry) return;
-    const md = entry.lines.join("\n").trim();
-    if (entry.key) guide.skills[entry.key] = md;
-    else guide.toolkit.push({ title: entry.title, md });
-    entry = null;
+    const md = src.slice(entry.start, entry.end).trim();
+    if (mode === "toolkit") guide.toolkit.push({ title: entry.title, md });
+    else {
+      const key = unique(slugify(entry.title));
+      guide.skills[key] = md;
+      guide.skillTitles[key] = entry.title;
+    }
+    state.entry = null;
   };
 
-  for (const line of readLines(file)) {
-    if (isFence(line)) fenced = !fenced;
-    let m: RegExpMatchArray | null;
-    if (!fenced && (m = line.match(/^## (.+)/))) {
+  for (const node of parseMarkdown(src).children) {
+    if (isHeading(node, 2)) {
       close();
-      const name = m[1]!.trim().toLowerCase();
+      const name = mdastToString(node).trim().toLowerCase();
       mode = name === "toolkit" ? "toolkit" : name === "skills" ? "skills" : null;
-    } else if (!fenced && mode && (m = line.match(/^### (.+)/))) {
+    } else if (isHeading(node, 3) && mode) {
       close();
-      entry = { title: m[1]!.trim(), lines: [] };
-      if (mode === "skills") {
-        entry.key = unique(slugify(entry.title));
-        guide.skillTitles[entry.key] = entry.title;
-      }
-    } else if (entry) {
-      entry.lines.push(line);
+      state.entry = { title: inner(src, node as Heading), start: node.position!.end.offset!, end: node.position!.end.offset! };
+    } else if (state.entry) {
+      state.entry.end = node.position!.end.offset!;
     }
   }
   close();
   return guide;
 }
 
-// quizzes/<slug>.md: each "### " heading starts a question. Task-list lines are options
-// (exactly one "[x]"), blockquote lines are the explanation or model answer.
+/** quizzes/<slug>.md: each "### " heading starts a question; a task list holds the options and a blockquote the answer. */
 export function parseQuiz(slug: string): Question[] | null {
   const file = join(QUIZ_DIR, `${slug}.md`);
   if (!existsSync(file)) return null;
-  const questions: { prompt: string[]; options: QuizOption[]; answer: string[] }[] = [];
-  let q: (typeof questions)[number] | null = null;
-  let fenced = false;
+  const src = readFileSync(file, "utf8");
+  const questions: Question[] = [];
+  let q: Question | null = null;
+  let answered = false;
 
-  for (const line of readLines(file)) {
-    if (isFence(line)) fenced = !fenced;
-    let m: RegExpMatchArray | null;
-    if (!fenced && (m = line.match(/^### (?:\d+[.)]\s*)?(.+)/))) {
-      q = { prompt: [m[1]!.trim()], options: [], answer: [] };
+  for (const node of parseMarkdown(src).children) {
+    if (isHeading(node, 3)) {
+      q = { prompt: inner(src, node as Heading).replace(/^\d+[.)]\s*/, ""), options: [], answer: "" };
       questions.push(q);
-    } else if (!q || (!fenced && /^#{1,2} /.test(line))) {
+      answered = false;
+    } else if (!q || node.type === "heading") {
       continue;
-    } else if (!fenced && (m = line.match(/^[-*] \[([ xX])\] (.+)/))) {
-      q.options.push({ text: m[2]!.trim(), correct: m[1] !== " " });
-    } else if (!fenced && (m = line.match(/^> ?(.*)/))) {
-      q.answer.push(m[1]!);
+    } else if (node.type === "list" && node.children.every(isTask)) {
+      q.options = node.children.map((item) => ({ text: inner(src, item), correct: item.checked === true }));
+    } else if (node.type === "blockquote") {
+      q.answer += (q.answer ? "\n\n" : "") + markdown((node as Blockquote).children);
+      answered = true;
+    } else if (answered) {
+      // Anything after the explanation has started belongs to it.
+      q.answer += `\n\n${source(src, node).trim()}`;
     } else {
-      // Fenced code after the explanation has started belongs to the explanation.
-      (q.answer.length ? q.answer : q.prompt).push(line);
+      q.prompt += `\n\n${source(src, node).trim()}`;
     }
   }
-  return questions.map((x) => ({
-    prompt: x.prompt.join("\n").trim(),
-    options: x.options,
-    answer: x.answer.join("\n").trim(),
-  }));
+  return questions;
+}
+
+/** Every link URL in a piece of markdown. */
+export function linksIn(md: string): string[] {
+  const urls: string[] = [];
+  visit(parseMarkdown(md), "link", (node) => {
+    urls.push(node.url);
+  });
+  return urls;
+}
+
+/** Whether a piece of markdown contains a heading (code blocks don't count). */
+export function hasHeading(md: string): boolean {
+  let found = false;
+  visit(parseMarkdown(md) as Root, "heading", () => {
+    found = true;
+  });
+  return found;
 }
 
 export const moduleFiles = () =>

@@ -3,7 +3,7 @@
 //   node scripts/validate.ts 03-css 04-javascript --links
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { ROOT, itemsOf, moduleFiles, parseGuide, parseModule, parseQuiz, skillName } from "../app/lib/content.server.ts";
+import { ROOT, hasHeading, itemsOf, linksIn, moduleFiles, parseGuide, parseModule, parseQuiz, skillName } from "../app/lib/content.server.ts";
 
 const args = process.argv.slice(2);
 const checkLinks = args.includes("--links");
@@ -15,7 +15,6 @@ const MIN_OPEN = 4;
 const MIN_SKILL_WORDS = 90;
 const TOOLKIT_SECTIONS = ["DevTools and tooling", "Testing and verifying your work", "Tricks and gotchas", "Official references"];
 
-const LINK = /\[[^\]]*\]\((https?:\/\/[^\s)]+)\)/g;
 const wordCount = (md: string) => md.split(/\s+/).filter(Boolean).length;
 
 let errors = 0;
@@ -61,8 +60,8 @@ for (const file of files) {
         continue;
       }
       if (wordCount(md) < MIN_SKILL_WORDS) error(slug, `guide entry "${name}" is under ${MIN_SKILL_WORDS} words`);
-      if (!md.match(LINK)) error(slug, `guide entry "${name}" has no resource link`);
-      if (/^#{1,6} /m.test(md.replace(/```[\s\S]*?```/g, ""))) error(slug, `guide entry "${name}" contains a heading`);
+      if (!linksIn(md).length) error(slug, `guide entry "${name}" has no resource link`);
+      if (hasHeading(md)) error(slug, `guide entry "${name}" contains a heading`);
     }
     for (const key of Object.keys(guide.skills)) {
       if (!keys.has(key)) error(slug, `guide entry "### ${guide.skillTitles[key]}" does not match any checklist skill`);
@@ -93,8 +92,8 @@ for (const file of files) {
   for (const dir of ["path", "guides", "quizzes"]) {
     const rel = `${dir}/${slug}.md`;
     if (!existsSync(join(ROOT, rel))) continue;
-    for (const m of readFileSync(join(ROOT, rel), "utf8").matchAll(LINK)) {
-      const url = m[1]!;
+    for (const url of linksIn(readFileSync(join(ROOT, rel), "utf8"))) {
+      if (!/^https?:/.test(url)) continue;
       if (!urls.has(url)) urls.set(url, new Set());
       urls.get(url)!.add(rel);
     }
